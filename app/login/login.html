@@ -1,0 +1,100 @@
+<div class="row login-row" data-ng-controller="loginCtrl as vm">
+    <article  class="main-login">
+        <section class="header-login">
+            <a href="javascript:;" class="logo">
+                <img  class="hidden-xs" src="i/desk/logo.png" alt="logo">
+                <img  class="visible-xs" src="i/mobi/big-logo.png" alt="logo">
+            </a>
+            <a href="javascript:;" class="sing-on hidden-xs">
+                <i class="icon-lock hidden-xs"></i>
+                <span class="text">
+                    Single Sign On
+                </span>
+            </a>
+        </section>
+        <!-- End header -->
+        <div class="clear"></div>
+
+        <section class=Left-login>
+            <span class="ge-big hidden-xs">
+                GE
+            </span>
+            <span class="name-company hidden-xs">Schedule Optimality</span>
+            <a href="javascript:;" class="again-sign hidden-xs">
+                Log In to gain Full access  
+            </a>
+            <p class="under-logo-text hidden-xs">GE Schedule Optimality Dashboard App</p>
+            <!-- mobile -->
+           <div class="cover-name-com">
+               <span class="ge-big visible-xs">
+                   GE
+               </span>
+               <span class="name-company visible-xs">Schedule Optimality</span>
+           </div>
+
+            <a href="javascript:;" class="again-sign visible-xs">
+                Log In to gain Full access  
+            </a>    
+            <p class="under-logo-text visible-xs">GE Schedule Optimality Dashboard App</p>
+        </section>
+        <!-- Left sec -->
+        <section class="right-login" data-ng-class="{'for-404':vm.loginError}">
+            <p class="title">Enter your User ID and password</p>
+            <p class="text-error">
+                Please enter correct username and password
+            </p>
+            <div class="group-input">
+                <a href="javascript:;" class="error-bg" data-ng-click="vm.loginError=false"></a>
+                <span class="label-g hidden-xs">Username</span>
+                <input type="text" placeholder="Username" data-ng-model="vm.username">
+                <div class="clear"></div>
+            </div>
+            <!-- Group input -->
+            <div class="group-input last">
+                <a href="javascript:;" class="error-bg"></a>
+                <span class="label-g hidden-xs">Password</span>
+                <input type="password" placeholder="Password" data-ng-model="vm.password">
+                <div class="clear"></div>
+            </div>
+            <!-- Group input -->
+            <section class="checkbox-c visible-xs">
+                <div class="checkbox-custom">
+                    <input id="check1" type="checkbox" name="check" value="check1">
+                    <label for="check1">Remember Me</label>
+                </div>
+                <a href="javascript:;" class="sing-on ">
+                    <i class="icon-lock"></i>
+                    <span class="text">
+                        Single Sign On
+                    </span>
+                </a>
+            </section>
+            <!-- Check -->
+            <div class="clear"></div>
+            <div class="btn-group">
+                
+                <a href="javascript:;" class="login" data-ng-click="vm.login()">Log in</a>
+                <a href="javascript:;" class="forgot">Forgot your password?</a>
+                <div class="clear"></div>
+            </div>
+            <!-- Group Btn -->
+            <div class="checkbox-custom-l hidden-xs">
+                <input id="check12" type="checkbox" name="check" value="check1">
+                <label for="check12">Remember Me</label>
+            </div>
+            <div class="clear hidden-xs"></div>
+        </section>
+        <!-- Right sec -->
+
+        <div class="clear"></div>
+        
+
+        <section class="footer-login">
+            <p>
+                Copyright General Electric Company 2016
+            </p>
+        </section>
+        <!-- End footer -->
+    </article>
+    <!-- Main Login -->
+</div>

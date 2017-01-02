@@ -1,0 +1,298 @@
+<div class="dashboard-overview-page">
+	<div class="bottom-main-details"> 
+		<div class="left-group-primary">
+			<div class="about-statistics">
+				<div class="po-payment-status">
+					<div class="top-title">
+						<span class="small-title">Q1 2016 SUmmary</span>
+						<div class="dropdown-here">
+							<div data-dropdown-select="ddSelectOptionsPoPayment" data-dropdown-model="ddSelectSelectedPoPayment"></div>
+						</div>
+					</div>
+					<!-- end .top-title -->
+					<div class="bottom-chart">
+						<div class="chart-details">
+							<div class="circle-chart">
+								<div id="chartRadiusOne" class="hidden-xs" data-radius-chart="dbRadiusChart.dataChartRadiusStatusAdjustment[0]" data-type-chart="desktop"></div>
+
+								<div id="chartRadiusTwo" class="visible-xs" data-radius-chart="dbRadiusChart.dataChartRadiusStatusAdjustment[0]" data-type-chart="mobile"></div>
+							</div>
+							<!-- end .circle-chart -->
+							<div class="num-legend">
+								<ul>
+									<li>
+										<span class="grey-num">154</span>
+										<span class="rainbow-title blue">Shipped &amp; Delivered</span>
+									</li>
+									<li>
+										<span class="grey-num">19</span>
+										<span class="rainbow-title green">Push to Next Quarter</span>
+									</li>
+									<li>
+										<span class="grey-num">3</span>
+										<span class="rainbow-title red">Negative Impact</span>
+									</li>
+								</ul>
+							</div>
+							<!-- end .num-legend -->
+							<div class="clear"></div>
+						</div>
+						<!-- end .chart-details -->
+						<div class="left-hint"><i class="icon-green-up-arrow"></i><i class="x-percent">3.7%</i><span>Opportunities  Applied from last Quarter</span></div>
+					</div>
+					<!-- end .bottom-chart -->
+				</div>
+				<!-- end .po-payment-status -->
+				<div class="new-opportunities">
+					<div class="top-title">
+						<span class="small-title">This Quarter</span>
+						<span class="big-title">NEW Opportunities</span>
+						<a class="view-calen hidden-xs" href="javascript:;" data-ng-click="goCalendarPage()">View in Calendar <i class="icon-view-calen"></i></a>
+						<a class="view-calen visible-xs" href="javascript:;" data-ng-click="goCalendarPage()">Calendar View<i class="icon-blue-next-arrow"></i></a>
+					</div>
+					<!-- end .top-title -->
+					<div class="bottom-chart">
+						<div class="total-number">
+							<div class="left-grey">
+								<span class="big-number">5</span>
+								<span class="small-title">Opportunities</span>
+							</div>
+							<!-- end .left-grey -->
+							<div class="left-grey clone">
+								<i class="icon-green-dollar03 icon-dollar01"></i>
+								<span class="big-number">$ 119,608</span>
+								<span class="small-title">Total Save up to</span>
+							</div>
+							<!-- end .left-grey -->
+							<div class="clear"></div>
+						</div>
+						<!-- end .total-number -->
+						<div class="critical-date">
+							<i class="icon-green-dollar02 icon-dollar03"></i>
+							<span class="t-title">OPPORTUNITIES</span>
+							<span class="b-title">Save up to <i class="t-bold">$119,608</i> by push out "Critical Date" on 3/2/2016.</span>
+						</div>
+					</div>
+					<!-- end .bottom-chart -->
+				</div>
+				<!-- end .new-opportunities -->
+				<div class="clear"></div>
+			</div>
+			<!-- end .about-statistics -->
+			<div class="about-calen-view">
+				<div class="top-title-func hidden-xs">
+					<div class="first-group-title">
+						<div class="left-content">
+							<span class="grey-title">Calendar view</span>
+							<div class="calen-ranger">
+								<a class="icon-prev-arrow" href="javascript:;" data-ng-click="prevMonth()" data-click-next-prev-month data-type="prev"></a>
+								<a class="icon-next-arrow" href="javascript:;" data-ng-click="nextMonth()" data-click-next-prev-month data-type="next"></a>
+								<!-- <span class="text">1 March 2016 - 2 May 2016 </span> -->
+								<span class="text">{{firstDay}} - {{lastDay}}</span>
+							</div>
+							<!-- end .calen-ranger -->
+							<div class="clear"></div>
+						</div>
+						<!-- end .left-content -->
+						<div class="right-content">
+							<div class="blue-toggle">
+								<a class="same-style one" href="javascript:;" data-ng-click="isShowTimeLine=false" data-ng-class="{active:!isShowTimeLine}">Month</a>
+								<a class="same-style two" href="javascript:;" data-ng-click="isShowTimeLine=true" data-ng-class="{active:isShowTimeLine}">Timeline</a>
+								<div class="clear"></div>
+							</div>
+							<!-- end .blue-toggle -->
+							<a class="btn-today" href="javascript:;" data-ng-click="toDayFunc()" data-click-next-prev-month data-type="today">Today</a>
+							<a class="icon-prev-page02" href="javascript:;" data-ng-click="prevMonth()" data-click-next-prev-month data-type="prev" ></a>
+							<a class="icon-next-page02" href="javascript:;" data-ng-click="nextMonth()" data-click-next-prev-month data-type="next"></a>
+							<div class="clear"></div>
+						</div>
+						<!-- end .right-content -->
+					</div>
+					<!-- end .first-group-title -->
+					<div class="second-group-func">
+						<span class="text">Filters</span>
+						<div class="search-here">
+							<a class="icon-search" href="javascript:;"></a>
+							<input class="for-search" type="text" placeholder="Search" data-ng-model="queryTitleCritical" data-ng-change="searchCritical(queryTitleCritical)" />
+						</div>
+						<!-- end .search-here -->
+						<div class="dropdown-here buyers drop-down-184 three">
+							<a class="cover-link btn-tooltipvender" href="javascript:;" data-ng-click="clickDropdownTooltip($event)">
+								<span>
+									{{titleFilterBuyer}}
+								</span>
+								<i class="icon-down-arrow03"></i>
+							</a>
+							<div class="tool-tip-show" data-tooltip-dropdown-block="buyerNameReport" data-title="Buyer" data-ng-click="$event.stopPropagation()">
+							</div>
+						</div>
+						<div class="dropdown-here vendors drop-down-184 three">
+							<a class="cover-link btn-tooltipvender" href="javascript:;" data-ng-click="clickDropdownTooltip($event)">
+								<span>
+									{{titleFilterVendor}}
+								</span>
+								<i class="icon-down-arrow03"></i>
+							</a>
+							<div class="tool-tip-show" data-tooltip-dropdown-block="vendorsName" data-title="Vendor" data-ng-click="$event.stopPropagation()">
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!-- end .second-group-func -->
+				</div>
+				<!-- end .top-title-func -->
+				<div class="top-title-func-mobi-ver visible-xs">
+					<span class="top-title">Calendar View</span>
+					<div class="choose-datetime">
+						<a class="icon-big-prev-arrow" href="javascript:;" data-ng-click="prevMonth()" data-click-next-prev-month data-type="prev"></a>
+						<a class="icon-big-next-arrow" href="javascript:;" data-ng-click="nextMonth()" data-click-next-prev-month data-type="next"></a>
+						<span class="dot"></span>
+						<span class="blue-text">{{firstDayMobile}}</span>
+						<span class="blue-text clone">{{lastDayMobile}}</span>
+						<div class="clear"></div>
+					</div>
+					<!-- end .choose-datetime -->
+					<div class="search-bar-mobi for-dash">
+
+						<div class="head-search" data-ng-show="isShowFilterMobile">
+							<div data-search-tag-block="listTag"></div>
+						</div>
+						<!-- Head Search -->
+
+						<div class="main-search" data-ng-show="isShowFilterMobile">
+							<div class="drop-down-here">
+								<a href="javascript:;" class="btn-buyers-tool" data-ng-click="clickDropdownTooltipMobile($event,'buyer')"></a>
+								<p class="text">
+									Buyers
+								</p>
+								<i class="icon-small-down-arrow"></i>
+								<i class="icon-small-up-arrow"></i>
+							</div>
+							<!-- Buyers -->
+							<div class="drop-down-here">
+								<a href="javascript:;" class="btn-vendors-tool" data-ng-click="clickDropdownTooltipMobile($event,'vendor')"></a>
+								<p class="text">
+									Vendors
+								</p>
+								<i class="icon-small-down-arrow"></i>
+								<i class="icon-small-up-arrow"></i>
+								
+							</div>
+							<!-- Vendors -->
+							<div class="clear"></div>
+							<div class="tool-tip-show buyers-tool" data-tooltip-dropdown-block="buyerNameReport" data-title="Buyer">
+							</div>
+							<div class="tool-tip-show vendors-tool" data-tooltip-dropdown-block="vendorsName" data-title="Vendor">
+							</div>
+						</div>
+						<!-- main-search -->
+					</div>
+					
+				</div>
+				<!-- end .top-title-func-mobi-ver -->
+				<div class="bottom-square-calen">
+					<div class="month-n-timeline visible-xs">
+						<a class="icon-filter" href="javascript:;" data-ng-click="isShowFilterMobile =! isShowFilterMobile"></a>
+						<a class="same-style only" href="javascript:;" data-ng-click="isShowTimeLine=false" data-ng-class="{active:!isShowTimeLine}">Month</a>
+						<a class="same-style" href="javascript:;" data-ng-click="isShowTimeLine=true" data-ng-class="{active:isShowTimeLine}">Timeline</a>
+						<div class="clear"></div>
+					</div>
+					<!-- end .month-n-timeline -->
+					<div class="calen-month-version" data-ng-show="!isShowTimeLine" data-full-calendar-block="dbCalendar">
+					
+					</div> 
+					<!-- end .calen-month-version -->
+					<div class="calen-timeline-version" data-time-line-block="dbCalendar" data-ng-show="isShowTimeLine">
+					</div>
+					<!-- end .calen-timeline-version -->
+				</div>
+				<!-- end .bottom-square-calen -->
+			</div>
+			<!-- end .about-calen-view -->
+		</div>
+		<!-- end .left-group-primary -->
+		<div class="clear"></div>
+	</div>
+	<!-- end .bottom-main-details -->
+	<div class="dark-overlay calendar-ver visible-xs ng-hide"></div>
+	<div class="dark-overlay-d calendar-ver visible-xs ng-hide"></div>
+	<div class="tooltip-payment-mobi-ver blue-ver visible-xs ng-hide">
+		<div class="top-title-content">
+			<a class="icon-big-remove closePaymentPopup" href="javascript:;"></a>
+			<span class="blue-square">Q1</span>
+			<span class="big-title">Payment Due</span>
+			<span class="small-status">Cash payment in <b>1st Quarter 2016</b>. "Payment due" on <b>30/1/2016</b> <i>(30 days)</i></span> 
+		</div>
+		<!-- end .top-title-content -->
+		<div class="bottom-data-content">
+			<div class="cover-all">
+				<ul>
+					<li>
+						<span class="big-title">HANGZHOU DATON WIND POWER IMPETUS CO LTD</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+					<li>
+						<span class="big-title">BRASVENDING COMERCIAL SA</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+				</ul>
+			</div>
+			<a class="blue-text" href="javascript:;">+1 More Vendors</a>
+		</div>
+		<!-- end .bottom-data-content -->
+	</div>
+	<!-- end .tooltip-payment-mobi-ver -->
+	<div class="tooltip-payment-mobi-ver green-ver visible-xs ng-hide">
+		<div class="top-title-content">
+			<a class="icon-big-remove closeOpportunitiesPopup" href="javascript:;"></a>
+			<span class="icon-dollar03"></span>
+			<span class="big-title">OPPORTUNITIES</span>
+			<span class="small-status">Save up to <b>$113,911</b> by push out "Critical Date" on <b>4/2/2016</b>.</span>
+		</div>
+		<!-- end .top-title-content -->
+		<div class="bottom-data-content">
+			<div class="cover-all">
+				<ul>
+					<li>
+						<span class="big-title">HANGZHOU DATON WIND POWER IMPETUS CO LTD</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+					<li>
+						<span class="big-title">BRASVENDING COMERCIAL SA</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+				</ul>
+			</div>
+			<a class="blue-text" href="javascript:;">+2 More Vendors</a>
+		</div>
+		<!-- end .bottom-data-content -->
+	</div>
+	<!-- end .tooltip-vendor-mobi-ver -->
+	<div class="tooltip-payment-mobi-ver vendor-ver visible-xs ng-hide">
+		<div class="bottom-data-content">
+			<div class="cover-all">
+				<ul>
+					<li>
+						<span class="big-title">HANGZHOU DATON WIND POWER IMPETUS CO LTD</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+					<li>
+						<span class="big-title">BRASVENDING COMERCIAL SA</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+				</ul>
+			</div>
+			<a class="blue-text" href="javascript:;">+2 More Vendors</a>
+		</div>
+		<!-- end .bottom-data-content -->
+	</div>
+	<!-- end .tooltip-payment-mobi-ver -->
+	<div class="bottom-navi visible-xs" data-header-mobi-temp></div>
+</div>
+<!-- end .dashboard-overview-page --> 

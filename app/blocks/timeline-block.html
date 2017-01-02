@@ -1,0 +1,47 @@
+<div class="top-datetime">
+	<div class="dropdown-here">
+		<div data-dropdown-select="ddSelectOptionsSortByMonth" data-dropdown-model="ddSelectSelectedSortByMonth" data-dropdown-onchange="selectedMonth(selected)"></div>
+	</div>
+	<span class="text">Today, {{getToday()}}</span>
+</div>
+<!-- end .top-datetime -->
+<div class="bottom-lines">
+	<div class="cover-all">
+		<div class="title-ranger visible-xs">
+			<span class="text">{{listGroupTimeLine[0].criticalDate | date :'MMM d'}} - {{listGroupTimeLine[listGroupTimeLine.length-1].criticalDate | date :'MMM d'}}</span>
+		</div>
+		<!-- end .title-ranger -->
+		<ul>
+			<li data-ng-repeat="group in listGroupTimeLine">
+				<span class="l-date" data-ng-class="{'fix-top':group.groups[0].status==='No Request'}">
+					<b>{{group.criticalDate | date :'d'}}</b>
+					<i>{{group.criticalDate | date :'EEE'}}</i>
+				</span>
+				<div class="same-style" data-ng-repeat="item in group.groups" data-ng-class="{active:item.status==='No Request'}">
+					<div class="ranger-event">
+						<i class="icon-green-dollar04 icon-dollar02"></i>
+						<p class="hidden-xs">{{formatDate(item.opportunitieStart)}}  -  {{formatDate(item.opportunitieEnd)}}  (<i class="t-green">16 days</i>)</p>
+					</div>
+					<!-- end .ranger-event -->
+					<div class="demo-event" data-ng-class="{'blue-ver':(item.status==='Request'),'orange-ver':(item.status==='No Request')}">
+						<span class="grey-title">{{item.title}}</span> 
+						<div data-percent-bar="item.percenProcess"></div>
+					</div>
+					<!-- end .demo-event -->
+				</div>
+				<!-- end .same-style -->
+			</li>
+		</ul>
+
+	</div>
+	<!-- end .cover-all -->
+</div>
+<!-- end .bottom-lines -->
+<div class="extra-legend">
+	<div class="opt-hint">
+		<i class="icon-green-dollar01 icon-dollar04"></i>
+		<span class="text">Opportunity found!</span>
+	</div>
+	<!-- end .opt-hint -->
+</div>
+<!-- end .extra-legend -->

@@ -1,0 +1,457 @@
+<article class="page-po-report hidden-xs">
+	<section class="search-bar-report">
+		<div class="group-search">
+			<div data-search-tag-block="listTagFilter"></div>
+			<!-- Cover Search -->
+			<div class="cover-filter">
+				<div class="cover-drop-down">
+					<div class="drop-down-184 three">
+						<input type="text" class= "critical-datepicker" placeholder="Critical date" /> 
+						<i class="icon-down-arrow03 critical-icon-datepicker"></i>
+					</div>
+					<!-- Crtical Date -->
+					<div class="drop-down-184 three">
+						<a class="cover-link btn-tooltipvender" href="javascript:;">
+							<span>
+								Buyer Name
+							</span>
+							<i class="icon-down-arrow03"></i>
+						</a>
+						<div class="tool-tip-show" data-tooltip-dropdown-block="buyerNameList" data-title="Buyer">
+						</div>
+						<!-- Tool Tip -->
+					</div>
+					<!-- Buyers Name -->
+					<div class="drop-down-184 three">
+						<a class="cover-link btn-tooltipvender" href="javascript:;">
+							<span>
+								Vendors Name
+							</span>
+							<i class="icon-down-arrow03"></i>
+						</a>
+						<div class="tool-tip-show" data-tooltip-dropdown-block="vendorsList" data-title="Vendor">
+						</div>
+						<!-- Tool Tip -->	
+					</div>
+					<!-- Vendor Name -->
+					<div class="drop-down-184 last three">
+						<a class="cover-link btn-tooltipvender" href="javascript:;">
+							<span>
+								Materials
+							</span>
+							<i class="icon-down-arrow03"></i>
+						</a>
+						<div class="tool-tip-show" data-tooltip-dropdown-block="materials" data-title="Materials">
+						</div>
+						<!-- Tool Tip -->
+					</div>
+					<!-- Marterials -->
+					<div class="show-only">
+						<div class="checkbox-custom">
+							<input id="check1" type="checkbox" name="check" value="check1">
+							<label for="check1">Show Only Suppliers Related to Me</label>
+						</div>
+					</div>
+					<!-- Show Only -->
+					<div class="drop-down-135">
+						<div data-dropdown-select="optionSaveFilter" data-dropdown-model="selectSaveFilter" ></div>
+					</div>
+					<!-- Save Fillter -->
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!-- Cover Filter -->
+		</div>
+		<!-- Group Search -->
+	</section>
+	<!-- SearchBar -->
+	<section class="data-table-show">
+		<div class="header-table">
+			<p class="left-text">
+				<span class="blue-text">
+					Open PO Report
+				</span>
+				<a href="javascript:;" class="show-how" data-ng-click="goCalendarView()">
+					Showing {{filteredItems.length}} Results
+				</a>
+			</p>
+			<!-- Left -->
+			<div class="right-tool">
+				<div class="drop-down-135">
+					<div data-dropdown-select="optionNewFirst" data-dropdown-model="selectNewFirst" ></div>
+				</div>
+				<!-- Newest First -->
+				<div class="tool-col" data-ng-show="listTagFilter.length===0">
+					<a href="javascript:;" class="cover-link" data-click-config-col></a>
+					<i  class="icon-setting"  ></i>
+					<div class="show-tool-col">
+						<p class="title">View Options</p>
+						<ul>
+							<li data-ng-repeat="item in listCol">
+								<div class="checkbox-custom">
+									<input data-ng-model="item.isShow" type="checkbox">
+									<label data-ng-click="item.isShow=!item.isShow;setClassForTable()">{{item.value}}</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- Show Tool -->
+				</div>
+			</div>
+			<!-- Right -->
+			<div class="clear"></div>
+		</div>
+		<!-- Header Table -->
+		<div class="table-data">
+			<table class="nice-table-report table-report-main">
+				<thead>
+					<tr>
+						<td>
+							<div class="checkbox-custom">
+								<input data-ng-model="isCheckAll" type="checkbox">
+								<label data-ng-click="checkAllItem()"></label>
+							</div>
+						</td>
+						<td data-ng-show="listCol[0].isShow">
+							<span class="blue-text">
+								PO Number
+							</span>
+						</td>
+						<td data-ng-show="listCol[1].isShow">
+							<span class="blue-text">
+								PO Creation Date
+							</span>
+						</td>
+						<td data-ng-show="listCol[2].isShow">
+							<span class="blue-text">
+								Need by Date
+							</span>
+						</td>
+						<td data-ng-show="listCol[3].isShow">
+							<span class="blue-text">
+								Promised date
+							</span>
+						</td>
+						<td data-ng-show="listCol[4].isShow">
+							<span class="blue-text">
+								Critical Date
+							</span>
+						</td>
+						<td data-ng-show="listCol[5].isShow">
+							<span class="blue-text">
+								Buyer Name
+							</span>
+						</td>
+						<td data-ng-show="listCol[6].isShow">
+							<span class="blue-text">
+								Requested By
+							</span>
+						</td>
+						<td data-ng-show="listCol[7].isShow">
+							<span class="blue-text">
+								Vendor Name
+							</span>
+						</td>
+						<td data-ng-show="listCol[8].isShow">
+							<span class="blue-text">
+								Po Status
+							</span>
+						</td>
+						<td class="number-r10" data-ng-show="listCol[9].isShow">
+							<span class="blue-text">
+								Sum of Open Quantity
+							</span>
+						</td>
+						<td class="number" data-ng-show="listCol[10].isShow">
+							<span class="blue-text">
+								Quantity
+							</span>
+						</td>
+					</tr>
+				</thead>
+				<!-- thead -->
+				<tbody>
+					<tr data-ng-repeat="item in pagedItems[currentPage] track by $index">
+						<td>
+							<div class="checkbox-custom">
+								<input type="checkbox" data-ng-model="selected[item.id]">
+								<label data-ng-click="clickCheckBoxItem(item);"></label>
+							</div>
+						</td>
+						<td data-ng-show="listCol[0].isShow">
+							<span class="normal-text">
+								{{item.poNumber}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[1].isShow">
+							<span class="normal-text">
+								{{item.poCreationDate}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[2].isShow">
+							<span class="normal-text">
+								{{item.needByDate}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[3].isShow">
+							<span class="normal-text">
+								{{item.promisedDate}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[4].isShow">
+							<span class="normal-text">
+								{{item.criticalDate}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[5].isShow">
+							<span class="normal-text">
+								{{item.buyerName}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[6].isShow">
+							<span class="normal-text">
+								{{item.requestedBy}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[7].isShow">
+							<span class="normal-text">
+								{{item.vendorName}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[8].isShow">
+							<span class="normal-text">
+								{{item.poStatus}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[9].isShow">
+							<span class="normal-text number-r10">
+								{{item.sumOfOpenQuantity | number}}
+							</span>
+						</td>
+						<td data-ng-show="listCol[10].isShow">
+							<span class="normal-text number">
+								{{item.quantity | number}}
+							</span>
+						</td>
+					</tr>
+					<!-- tr -->
+				</tbody>
+				<!-- tbody -->
+			</table>
+		</div>
+		<!-- Table-data -->
+		<div class="footer-data">
+			<div class="left">
+				<p class="result">
+					Results per-page :
+				</p>
+				<ul class="how-many-show">
+					<li data-ng-repeat="item in arrayPerPage" data-ng-class="{active:item.isSelected}">
+						<a href="javascript:;" data-ng-click="setNumberPerPage(item.value);item.isSelected =!item.isSelected">{{item.value}}</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Left Footer -->
+			<div class="right">
+				<ul>
+					<li class="first-arrow" data-ng-class="{active:currentPage!==0,disable: currentPage===0}">
+						<span  class="icon-prev-page01"></span>
+						<a href="javascript:;" class="icon-next-page01" data-ng-click="prevPage()"></a>
+					</li>
+					<li class="number">
+						<input type="text" data-ng-model="inputCurrentPage" data-valid-number data-ng-keypress="setPage($event)">
+					</li>
+					<li class="of">
+						<p>
+							<span class="grey">
+								of	
+							</span>
+							<span class="blue">
+								{{pagedItems.length}}
+							</span>
+						</p>
+					</li>
+					<li class="last-arrow" data-ng-class="{active:currentPage===0,disable: currentPage===(pagedItems.length-1)}">
+						<span  class="icon-prev-page01"></span>
+						<a href="javascript:;" class="icon-next-page01" data-ng-click="nextPage()"></a>
+					</li>
+				</ul>
+			</div>
+			<!-- Right Footer -->
+			<div class="clear"></div>
+		</div>
+		<!-- Fotter Data -->
+	</section>
+</article>
+<!-- Report desk -->
+
+<article class="page-po-report-mobi visible-xs">
+	<section class="search-bar-mobi">
+		<div class="head-search">
+			<div data-search-tag-block="listTagFilter"></div>
+			<!-- Cover Search -->
+		</div>
+		<!-- Head Search -->
+		<div class="main-search">
+			<div class="drop-down-here">
+				<input type="text" class= "critical-datepicker" placeholder="Critical date" /> 
+				<i class="icon-small-down-arrow"></i>
+				<i class="icon-small-up-arrow"></i>
+			</div>
+			<!-- Critical Date -->
+			<div class="drop-down-here">
+				<a href="javascript:;" class="btn-buyers-tool">	
+					
+				</a>
+				<p class="text">
+					Buyers
+				</p>
+				<i class="icon-small-down-arrow"></i>
+				<i class="icon-small-up-arrow"></i>
+			</div>
+			<!-- Buyers -->
+			<div class="drop-down-here">
+				<a href="javascript:;" class="btn-vendors-tool">	
+					
+				</a>
+				<p class="text">
+					Vendors
+				</p>
+				<i class="icon-small-down-arrow"></i>
+				<i class="icon-small-up-arrow"></i>
+				
+			</div>
+			<!-- Vendors -->
+			<div class="drop-down-here">
+				<a href="javascript:;" class="btn-materials-tool">	
+					
+				</a>
+				<p class="text">
+					Materials
+				</p>
+				<i class="icon-small-down-arrow"></i>
+				<i class="icon-small-up-arrow"></i>
+			</div>
+			<!-- Materials -->
+			<div class="clear"></div>
+			<div class="tool-tip-show buyers-tool" data-tooltip-dropdown-block="buyerNameList" data-title="Buyer">
+			</div>
+			<div class="tool-tip-show vendors-tool" data-tooltip-dropdown-block="vendorsList" data-title="Vendor">
+			</div>
+			<div class="tool-tip-show materials-tool" data-tooltip-dropdown-block="materials" data-title="Material">
+			</div>
+
+		</div>
+		<!-- main-search -->
+		<div class="check-and-save">
+			<div class="checkbox-custom">
+				<input id="check7" name="check" value="check1" type="checkbox">
+				<label for="check7">Show Only Suppliers Related to Me</label>
+			</div>
+			<a href="javascript:;" class="save-blue">
+				Saved Filter 
+				<span class="number">(2)</span>
+			</a>
+		</div>
+		<!-- Check And Save -->
+	</section>
+	<!-- Search Bar -->
+	<section class="main-report-d">
+		<div class="head-main">
+			<p class="result" data-ng-click="goCalendarView()">
+				{{filteredItems.length}} Results
+			</p>
+			<a href="javascript:;" class="new">
+				Newest First
+			</a>
+			<div class="clear"></div>
+		</div>
+		<!-- Head Main -->
+		<div class="table-data-box">
+			<div class="box" data-ng-repeat="item in filteredItems | limitTo : limitNumberShow">
+				<div class="head-box">
+					<div class="checkbox-custom">
+						<input type="checkbox" data-ng-model="selected[item.id]">
+						<label data-ng-click="clickCheckBoxItem(item);"></label>
+					</div>
+					<!-- Check box -->
+					<div class="cover-text">
+						<p class="text-big">
+							{{item.poNumber}}
+						</p>
+						<p class="text-small">
+							{{item.vendorName}}
+						</p>
+					</div>
+					<!-- text -->
+					<a href="javascript:;" class="arrow-right btn-colappse">
+						<i class="icon-big-down-arrow"></i>
+						<i class="icon-big-up-arrow"></i>
+					</a>
+					<a href="javascript:;" class="icon-dollar02"></a>
+					<div class="clear"></div>
+				</div>
+				<!-- Head Box -->
+				<span class="line"></span>
+				<div class="main-box">
+
+					<div class="group-text">
+						<p class="text-small">
+							Need By Date
+						</p>
+						<p class="text-big">
+							{{item.needByDate}}
+						</p>
+					</div>
+
+					<div class="group-text">
+						<p class="text-small">
+							Critical Date
+						</p>
+						<p class="text-big blue">
+							{{item.criticalDate}}
+						</p>
+					</div>
+					<div class="group-text">
+						<p class="text-small right">
+							Open Quantity
+						</p>
+						<p class="text-big right">
+							{{item.sumOfOpenQuantity}}
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="more-detail">
+					<div class="group-text">
+						<p class="text-small">Buyer</p>
+						<p class="text-big">{{item.buyerName}}</p>
+						<div class="clear"></div>
+					</div>
+					<!-- Group-text	 -->
+					<div class="group-text">
+						<p class="text-small">Promised Date</p>
+						<p class="text-big">{{item.promisedDate}}</p>
+						<div class="clear"></div>
+					</div>
+					<!-- Group-text	 -->
+					<div class="clear"></div>
+				</div>
+				<a class="view-more" href="javascript:;">View More Detail</a>
+			</div>
+			<!-- Box -->
+		</div>
+		<div data-scroll-trigger="loadMore()" data-threshold="50"></div>
+		<div class="clear"></div>
+		<div  class="loading-page hide">
+			<a href="javascript:;">Loading</a>
+		</div>
+		<div class="bottom-navi" data-header-mobi-temp>
+		</div>
+	</section>
+	<!-- Main Report -->
+	<div class="clear"></div>
+	
+</article>
+<!-- Report Mobi -->
+<div class="dark-over-all hide"></div>

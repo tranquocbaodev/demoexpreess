@@ -1,0 +1,17 @@
+<div class="cover-search" data-ng-class="{active:(listTag.length>0)}">
+	<div class="tag-search-here">
+		<div class="demo-tag" data-ng-repeat="item in listTag">
+			<span class="name"><i data-ng-show="item.type!=='string'">{{item.type}} :</i>  {{item.value}}</span>
+			<a class="btn-close" href="javascript:;" data-ng-click="removeTagFilter($index)">
+				<i class="icon-remove hidden-xs"></i>
+				<i class="icon-big-remove visible-xs"></i>
+			</a>
+			<div class="clear"></div>
+		</div>
+		<!-- end .demo-tag -->
+		<input class="for-search" type="text" placeholder="Search" data-ng-keypress="keyPressFunc($event)" data-ng-model="inputSearchTag">
+		<a class="icon-search hidden-xs" href="javascript:;"></a>
+		<a class="icon-small-search visible-xs" href="javascript:;"></a>
+		<div class="clear"></div>
+	</div>
+</div>

@@ -1,0 +1,529 @@
+.login-row {
+	position: relative;
+	height: 100vh;
+}
+// Login
+.main-login {
+	display: block;
+	width: 584px;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%; 
+	margin-top: -222px;
+	margin-left: -292px;
+	// Header Login
+	.header-login {
+		display: block;
+		width: 100%;
+		height: 65px;
+		position: relative;
+		border-bottom:1px solid #b3b3b3;
+		.logo {
+			display: block;
+			position: absolute;
+			top:0;
+			left: 2px;
+			img {
+				display: block;
+				width: 49px;
+				height: 49px;
+				@include circlec(50%);
+			}
+
+		}
+		.sing-on {
+			float: right;
+			position: relative;
+			padding-top: 30px;
+			.icon-lock {
+				display: block;
+				position: absolute;
+				top: 25px;
+				left: -31px;
+			}
+			.text {
+				display: block;
+				font-size: 16px;
+				font-weight: 500;
+				color: #8c8c8c;
+			}
+		}
+	}
+	// Left
+	.Left-login {
+		float: left;
+		padding-top: 82px;
+		width: 286px;
+		.cover-name-com {
+			display: block;
+			overflow: hidden;
+			width: 259px;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+		.ge-big {
+			display: inline-block;
+			font-size: 20px;
+			color: #313131;	text-align: center;		
+			float: left;
+			margin-top: 4px;
+
+		}
+		.name-company {
+			font-weight: 500;
+			font-size: 25px;
+			display: inline-block;
+			color: #313131;
+			text-align: center;
+			float: left;
+			margin-left: 5px;
+		}
+		.again-sign {
+			display: block;
+			font-size: 13px;
+			color: #333333;
+			line-height: 18px;
+			padding-right: 131px;
+			margin-top: 31px;
+			padding-left: 2px;
+		}
+		.under-logo-text {
+			display: block;
+			font-size: 13px;
+			color: #333333;
+			line-height: 18px;
+			padding-left: 2px;
+			width: 353px;
+		}
+	}
+	// Right
+	.right-login {
+		float: right;
+		width: 283px;
+		padding-top: 66px;
+		margin-right: 12px;
+		// For 404
+		&.for-404 {
+			position: relative;
+			.text-error {
+				display: none;
+				position: absolute;
+				color: #ee3124;
+				top: 85px;
+				font-size: 12px;
+				text-align: center;
+				width: 92%;
+			}
+			.group-input {
+				position: relative;
+				background: rgba(238,49,36,0.3);
+				.error-bg {
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top:0;
+					left: 0;
+					
+				}
+			}
+		}
+		.title {
+			display: block;
+			font-size: 18px;
+			color: #333333;
+			margin-bottom: 17px;
+			padding-left: 3px;
+		}
+		.text-error {
+			display: none;
+		}
+		.group-input {
+			display: block;
+			border-bottom:1px solid #b3b3b3;
+			padding-left: 8px;
+			height: 42px;
+			margin-bottom: 8px;
+			.error-bg {
+				display: none;
+			}
+			&.last {
+				margin-bottom: 0px;
+			}
+			input {
+				float: left;
+				@include  input-mixin(#333333,12px,#333333);
+				width: calc(100% - 63px);
+				padding-left: 18px;
+
+			}
+			.label-g {
+				float: left;
+				font-size: 12px;
+				line-height: 41px;
+				color: #333333;
+				font-weight: 500;
+				width: 53px;
+				text-align: right;
+			}
+		}
+		.btn-group {
+			display: block;
+			width: 100%;
+			padding-left: 1px;
+			.login {
+				float: left;
+				width: 132px;
+				height: 36px;
+				line-height: 33px;
+				color: #fff;
+				text-align: center;
+				background:#3b73b9;
+				font-weight: 500;
+				font-size: 13px;
+				margin-top: 22px;
+				&:hover {
+					background: #6095d8;
+				}
+			}
+			.forgot {
+				float: right;
+				height: 36px;
+				line-height: 33px;
+				color: #3b73b9;
+				text-align: center;
+				font-size: 13px;
+				margin-top: 22px;
+				&:hover {
+					color: #6095d8;
+				}
+			}
+		}
+	}
+	//footer Login
+	.footer-login {
+		display: block;
+		width: 100%;
+		position: relative;
+		border-top:1px solid #b3b3b3;
+		margin-top: 98px; 
+		height: 30px;
+			p {
+				display: block;
+				font-size: 12px;
+				color: rgba(51,51,51,0.6);
+				padding-top: 9px;
+				padding-left: 5px;
+		}
+	}
+}
+
+.checkbox-custom-l {
+	display: block;
+	float: left;
+	margin-top: 10px;
+	label {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		font-size: 13px;
+		line-height: 22px;
+		color: #313131;
+		font-weight: 400;
+		padding-left: 28px;
+	}
+	label::before {
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background-color: #fcfcfc;
+		border:1px solid rgb(179, 179, 179);
+		position: absolute;
+		left: 0;
+		bottom: 3px;
+		@include circlec(4px);
+		
+	}
+	input[type=checkbox]:checked + label::before {
+		content: "";
+		background:#0062f4;
+		
+	}
+	input[type=checkbox]:checked + label::after {
+		content: "";
+		display: block;
+		width: 5px;
+		height: 8px;
+		border: solid #fff;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+		position: absolute;
+		top: 6px;
+		left: 6px;
+	}
+}
+
+//Media Queries for Standard Devices
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 767px)  {
+	.login-row {
+		position: relative;
+		height: auto;
+	}
+
+	.main-login .Left-login .again-sign {
+		margin-top: 11px;
+	}
+	.main-login .Left-login .under-logo-text {
+		display: block;
+		width: 100%;
+		padding-left: 0;
+		text-align: center;
+	}
+	.main-login {
+		display: block;
+		width: 375px;
+		position: relative;
+		top:0;
+		left: 0;
+		margin: 0 auto;
+		padding: 0 20px;
+
+		// header login
+		.header-login {
+			display: block;
+			width: 100%;
+			border-bottom: none;
+			height: auto;
+			.logo {
+				position: relative;
+				top:0;
+				left: 0;
+				padding-top: 35px;
+				img {
+					display: block;
+					width: 75px;
+					height: 75px;
+					margin: 0 auto;
+				}
+			}
+		}
+		//footer login 
+		.footer-login {
+			display: block;
+			height: 50px;
+			border: none;
+			background:#f8f8f8;
+			margin-top: 0;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			p {
+				font-size: 12px;
+				text-align: center;
+				line-height: 50px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+		// left login
+		.Left-login {
+			display: block;
+			width: 100%;
+			padding-top: 0;
+			.again-sign {
+				display: block;
+				padding-right: 0;
+				text-align: center;
+				margin-top: 47px;
+			}
+		}
+		.right-login {
+			display: block;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			&.for-404 {
+				.text-error {
+					display: block;
+					font-size: 16px;
+					top: 49px;
+					width: 100%;
+				}
+			}
+			.title {
+				margin-top: 16.5px;
+				margin-bottom: 41px;
+			}
+			// Group input
+			.group-input {
+				display: block;
+				width: 100%;
+				height: 56px;
+				border-bottom: 1px solid #b3b3b3;
+				margin-bottom: 7px;
+				.label-g {
+					line-height: 56px;
+					font-size: 18px;
+					font-weight: 400;
+					color: rgba(51,51,51,0.6);
+				}
+				input {
+					width: calc(100% - 91px);
+					font-size: 18px;
+					padding-left: 0;
+					&::-webkit-input-placeholder {
+					    text-transform: capitalize;
+					    color: rgba(51,51,51,0.6);
+					}
+					&::-moz-placeholder  {
+					    text-transform: capitalize;
+					    color: rgba(51,51,51,0.6);
+					}
+					&:-ms-input-placeholder {
+					   text-transform: capitalize;
+					   color: rgba(51,51,51,0.6);
+					}
+					&:-moz-placeholder {
+					    text-transform: capitalize;
+					    color: rgba(51,51,51,0.6);
+					}
+					
+				}
+			}
+			// checkbox
+			.checkbox-c {
+				display: block;
+				width: 100%;
+				padding-top: 23px;
+			}
+			.sing-on {
+				float: right;
+				position: relative;
+				padding-top: 4px;
+				top: -4px;
+				.text {
+					display: block;
+					font-size: 16px;
+					color: #8c8c8c;
+					margin-top: 3px;
+				}
+				.icon-lock {
+					left: -29px;
+					position: absolute;
+				}
+			}
+			// Checkbox Custom
+			.checkbox-custom {
+				display: block;
+				float: left;
+				label {
+					display: inline-block;
+					cursor: pointer;
+					position: relative;
+					font-size: 16px;
+					line-height: 22px;
+					color: #313131;
+					font-weight: 400;
+					padding-left: 28px;
+				}
+				label::before {
+					content: "";
+					display: inline-block;
+					background-color:#fcfcfc;
+					@include circlec(5px);
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					left: 0;
+					bottom: 1px;
+					border:1px solid rgb(179, 179, 179);
+					
+				}
+				input[type=checkbox]:checked + label::before {
+					content: "";
+					width: 20px;
+					height:20px;
+					background:#007bf7;
+				}
+				input[type=checkbox]:checked + label::after  {
+					content: "";
+					display: block;
+					width: 8px;
+					height: 13px;
+					border: solid #fff;
+					border-width: 0 3.5px 3.5px 0;
+					transform: rotate(45deg);
+					position: absolute;
+					top: 2px;
+					left: 6px;
+				}
+			}
+			// Btn Group
+			.btn-group {
+				display: block;
+				width: 100%;
+				padding-left: 0;
+				.login {
+					display: block;
+					width: 100%;
+					height: 45px;
+					line-height: 1;
+					float: none;
+					margin-top: 29px;
+					padding: 0;
+					font-size: 18px;
+					text-transform: uppercase;
+					padding-top: 4px;
+				}
+				.forgot {
+					display: block;
+					width: 100%;
+					text-align: center;
+					float: none;
+					font-size: 16px;
+					margin-top: 15px;
+					padding-bottom: 116px;
+				}
+			}
+		}
+	}
+}
+// ---End---
+
+
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px)  {
+	
+}
+// ---End---
+
+
+@media only screen 
+and (min-width : 992px) 
+and (max-width : 1279px)  {
+	
+}
+// ---End---
+
+// For IP 320px
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 320px)  {
+	
+	.main-login {
+		width: 320px;
+	}
+	.main-login .right-login.for-404 .text-error {
+		font-size: 14px;
+	}
+
+}

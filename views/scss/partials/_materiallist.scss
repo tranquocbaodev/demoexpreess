@@ -1,0 +1,381 @@
+// Color Number Top
+	.color-number-top {
+		display: block;
+		width: 100%;
+		position: relative;
+		height: 86px;
+		z-index: 300;
+		background:#f8f8f8;
+		ul {
+			display: block;
+			width: 700px;
+			overflow: hidden;
+			margin: 0 auto;
+			li {
+				float: left;
+				width: 25%;
+				text-align: center;
+				padding-top: 15px;
+				.text-big {
+					display: block;
+					font-size: 36px;
+					font-weight: 500;
+					&.blue {
+						color: #16a4de;
+					}
+					&.grey {
+						color: #8c8c8c;
+					}
+					&.orange {
+						color: #f8971d;
+					}
+					&.green {
+						color: #8dc63f;
+					}
+				}
+				.text-small {
+					display: block;
+					font-size: 11px;
+					font-weight: 500;
+					color: #333333;
+					text-transform: uppercase;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+
+// Page marterial
+.page-po-report {
+		// Table
+	 .data-table-show {
+	 	.table-data {
+	 		
+	 		
+	 		&.table-data-meterial {
+	 			table {
+	 				thead {
+	 					tr {
+	 						td {
+	 							width: auto;
+
+	 						}
+	 					}
+	 				}
+	 			}
+		 		table {
+		 			// for nice material
+		 			&.nice-table-material {
+		 				thead {
+							tr {
+								td {
+									&:nth-child(1) {
+										width: 50px;
+									}
+									&.number {
+										padding-right: 63px;
+									}
+
+								}
+							}
+		 				}
+		 				 tbody tr td .normal-text.number {
+		 					padding-right: 51px;
+		 				} 
+		 			}
+
+		 		}
+	 		}
+	 	}
+	 }
+}
+
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 767px)  {
+	
+
+	.color-number-top {
+		ul {
+			width: 100%;
+			margin: 0;
+		}
+	}
+	// Checkbox Custom
+	.checkbox-custom-c {
+		display: block;
+		float: left;
+		padding-left: 14px;
+		position: absolute;
+		width: 100px;
+		left: 50%;
+		margin-left: -50px;
+		top: 23px;
+		label {
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			font-size: 14px;
+			line-height: 22px;
+			color: #333333;
+			font-weight: 400;
+			padding-left: 27px;
+		}
+		label::before {
+		    content: "";
+		    display: block;
+		    background-image: url(../i/mobi/sprite@2x.png);
+		    background-position: calc(-106px / 2) calc(-112px / 2);
+		    background-size: calc(270px / 2) calc(228px / 2);
+		    width: 20px;
+		    height: 20px;
+		    position: absolute;
+		    left: 0px;
+		    bottom: 0px;
+			
+		}
+		input[type=checkbox]:checked + label::before {
+			content: "";
+			background-image: url(../i/mobi/sprite@2x.png);
+			background-position: calc(0px / 2) calc(-165px / 2);
+			background-size: calc(270px / 2) calc(228px / 2);
+			width: 19px;
+			height: 19px;
+			
+		}
+	}
+
+	.page-po-report-mobi .main-report-d .table-data-box.for-material  {
+		.box {
+			height: auto;
+			//head box
+			 .head-box {
+			 	.cover-text {
+			 		.text-big {
+			 			margin-top: 16px;
+			 		}
+			 	}
+			 }
+			// For active box
+			.main-box {
+				display: block;
+				width: 100%;
+				// Group text
+				.group-text {
+					width: 33.3%;
+					padding-bottom: 13px;
+					&:nth-child(3) {
+						.text-big {
+							text-align: left;
+						}
+					}
+				}
+			}
+			// More Detail
+			.more-detail {
+				height: auto;
+				margin-top: 0;
+				.group-text {
+					margin-bottom: 6px;
+					.text-small {
+						line-height: 14px;
+						width: 30px;
+					}
+					.text-big {
+						width: 70%;
+						line-height: 14px;
+					}
+				}
+			}
+			.view-more {
+				position: relative;
+				border-bottom: 1px solid #e1e1e1;
+			}
+			.three-btn {
+				display: none;
+				position: relative;
+				width: 345px;
+				margin: 0 auto;
+				padding: 0 15px;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				overflow: hidden;
+				a {
+					float: left;
+					width: 95px;
+					height: 26px;
+					line-height: 1;
+					padding-top: 8px;
+					font-size: 12px;
+					color: #fff;
+					font-weight: 500;
+					text-align: center;
+					@include circlec(3px);
+					text-transform: uppercase;
+					&:nth-child(1) {
+						background-color: rgb(187, 187, 187);
+					}
+					&:nth-child(2) {
+						background-color: rgb(187, 187, 187);
+						margin: 0 15px;
+					}	
+					&:nth-child(3) {
+						background:#14a1df;
+					}
+				}
+			}
+			&.active {
+				height: auto;
+				.three-btn {
+					display: block;
+				}
+			}
+		}
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here:nth-child(1) i {
+		left: 70px;
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here:nth-child(2) i {
+		left: 86px;
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here:nth-child(3) i {
+		left: 82px;
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here:nth-child(4) i {
+		left: 73px;
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here.active:nth-child(4) a::before {
+		left: 70px;
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here.active:nth-child(3) a::before {
+		left: 78px;
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here.active:nth-child(2) a::before {
+		left: 68px;
+	}
+	.page-po-report-mobi .search-bar-mobi .main-search.for-materials .drop-down-here.active:nth-child(1) a::before {
+		left: 66px;
+	}
+}
+
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px)  { 
+	// Page marterial
+	.page-po-report {
+
+			// Table
+		 .data-table-show {
+		 	.table-data {
+		 		
+		 		
+		 		&.table-data-meterial {
+		 			table {
+		 				thead {
+		 					tr {
+		 						td {
+		 							width:auto;
+		 							&:nth-child(1) {
+		 								width: 50px;
+		 							}
+		 							&.number {
+		 								padding-right: 20px;
+		 							}
+
+		 						}
+		 					}
+		 				}
+		 			}
+			 		table {
+			 			// for nice material
+			 			&.nice-table-material {
+			 				thead {
+								tr {
+									td {
+										&.number {
+											padding-right: 63px;
+										}
+
+									}
+								}
+			 				}
+			 				 tbody tr td .normal-text.number {
+			 					padding-right: 51px;
+			 				} 
+			 			}
+
+			 		}
+		 		}
+		 	}
+		 }
+	}
+}
+
+
+@media only screen 
+and (min-width : 992px) 
+and (max-width : 1279px)  { 
+	// Page marterial
+	.page-po-report {
+
+			// Table
+		 .data-table-show {
+		 	.table-data {
+		 		
+		 		
+		 		&.table-data-meterial {
+		 			table {
+		 				thead {
+		 					tr {
+		 						td {
+		 							width:auto;
+		 							&:nth-child(1) {
+		 								width: 50px;
+		 							}
+		 							
+		 							&.number {
+		 								padding-right: 20px;
+		 							}
+
+		 						}
+		 					}
+		 				}
+		 			}
+			 		table {
+			 			// for nice material
+			 			&.nice-table-material {
+			 				thead {
+								tr {
+									td {
+
+									}
+								}
+			 				}
+			 				 tbody tr td .normal-text.number {
+			 					padding-right: 51px;
+			 				} 
+			 			}
+
+			 		}
+		 		}
+		 	}
+		 }
+	}
+}
+
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 320px) {
+	.page-po-report-mobi .main-report-d .table-data-box.for-material .box.active .three-btn {
+		width: 294px;
+	}
+	.page-po-report-mobi .main-report-d .table-data-box.for-material .box .three-btn a {
+		width: 77px;
+	}
+	.page-po-report-mobi .main-report-d .table-data-box.for-material .box .more-detail .group-text .text-small {
+		width: 77px;
+	} 
+}

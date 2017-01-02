@@ -1,0 +1,852 @@
+.container-fluid {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'GE Inspira';
+	font-weight: normal;
+	font-style: normal;
+	color: #fff;
+	overflow-y: auto;
+	position: relative;
+}
+.row {
+	margin: 0;
+	padding: 0;
+}
+.clear, .clear:before, .clear:after {
+	clear: both;
+}
+.dark-overlay {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 500;
+}
+.dark-overlay-d {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 700;
+}
+
+
+/*** Calendar ***/
+.calAlert{
+	width: 595px; float: right; margin-bottom: 5px;
+}
+
+.calXBtn{
+	float: right; margin-top: -5px; margin-right: -5px;
+}
+
+.calWell{
+	float: left; margin-bottom: 40px;
+}
+
+.fc-event.openSesame .fc-event-skin{
+	background-color: rgb(229, 229, 11);
+	color: black;
+}
+
+.fc-event.customFeed .fc-event-skin{
+	background-color: rgb(132, 222, 175);
+	color: black;
+}
+
+.calTools{
+	margin-bottom: 10px;
+}
+
+/*custom*/
+// calendar
+.fc-time {
+	display: none;
+}
+
+.fc-toolbar{
+	display: none;
+}
+.calendar {
+	display: block;
+	font-family: 'GE Inspira';
+	color: #333;
+	
+}
+.fc th, .fc td {
+	font-family: 'GE Inspira';
+	color: #333;
+}
+
+
+	.calendar .fc-row table thead tr th.fc-day-header {
+		height: 43px;
+		line-height: 43px;
+		font-size: 13px;
+		font-weight: normal;
+	}
+
+	.calendar .fc-content-skeleton	table tr td {
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.calendar .fc-basic-view .fc-body .fc-row {
+		height: 64px !important;
+	}
+	.calendar .fc-basic-view .fc-body .fc-row {
+		min-height: initial;
+	}
+
+	.calendar .fc-event-container {
+		position: relative;
+	}
+		// quart box
+		.calendar .fc-event-container .quarter-box {
+			display: block;
+			position: absolute;
+			top: -22px;
+			left: 0;
+			font-size: 9px;
+			color: #fff;
+			background-color: #14a1df;
+			padding: 5px 4px 3px 4px;
+			text-align: center;
+			cursor: pointer;
+		}
+		// quarter 2
+		.calendar .fc-event-container .event-box.q-two .quarter-box {
+			background-color: #204c80;
+		} 
+			.calendar .fc-event-container .event-box.inline-title-calendar .quarter-box {
+				display: none;
+			}
+			.calendar .fc-event-container .event-box.hide-icon .quarter-box {
+				display: none;
+			}
+				.calendar .fc-event-container .event-box.opportunitie-active .quarter-box {
+					left: 217px;
+					top: 10px;
+					width: 19px;
+					height: 19px;				}
+		// money-box
+		.calendar .fc-event-container .money-box {
+			display: block;
+			position: absolute;
+			top: -22px;
+			left: 23px;
+			cursor: pointer;
+		}
+			.calendar .fc-event-container .event-box.critical-active .money-box {
+				display: none;
+			}
+
+			.calendar .fc-event-container .event-box.inline-title-calendar .money-box {
+				display: none;
+			}
+			.calendar .fc-event-container .event-box.hide-icon .money-box {
+				display: none;
+			}
+
+			.calendar .fc-event-container .event-box.opportunitie-active .money-box {
+				left: 240px;
+				top: 10px;
+			}
+
+		// custom main text
+		.calendar .fc-event {
+		    position: relative;
+		    display: block;
+		    width: 100%;
+		    font-size: 11px;
+		    line-height: 1.3;
+		    border-radius: 0;
+		    border: none;
+		    background-color: inherit;
+		    font-weight: normal;
+		}
+			.calendar .fc-event-container .event-box {
+				height: 37px;
+				background: #d6f0fa;
+				border-top: 1px solid #84c6df;
+				border-right: 1px solid #84c6df;
+				border-bottom: 1px solid #84c6df;
+				border-left: 3px solid #0062f4;
+				position: relative;
+				top: 5px;
+				padding-left: 7px;
+				z-index: 99;
+				&.fix-zindex {
+					z-index: 1000 !important;
+				}
+				&.fix-zindex-plus {
+					z-index: 1001 !important;
+				}
+			}
+				.calendar .fc-event-container .event-box.no-critical-active {
+					border-left: 3px solid #f8971d;
+					z-index: 100;
+				}
+			.calendar .fc-event-container .event-box.inline-title-calendar {
+				border-left: none;
+			}
+				// critical-after
+				.calendar .fc-event-container .event-box.critical-after {
+					border-top: 1px solid #84c6df;
+					border-right: 1px solid #84c6df;
+					border-bottom: 1px solid #84c6df;
+					background: repeating-linear-gradient(
+					-45deg,
+					#e1f4fb,
+					#e1f4fb 4px,
+					#d6f0fa 5px,
+					#d6f0fa 6px 
+					);
+				}
+				// no-opportunitie-active
+				.calendar .fc-event-container .event-box.no-opportunitie-active {
+					border-right: 0;
+					border-top: 1px solid #ee342a;
+					border-bottom: 1px solid #ee342a;
+					background: repeating-linear-gradient(
+					-45deg,
+					#f77d70,
+					#f77d70 4px, 
+					#f44b36 5px,
+					#f44b36 6px 
+					);
+				}
+				.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar {
+					z-index: 1001;
+				}
+					.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar.hide-icon .quarter-box {
+						display: block;
+						top: 10px;
+						left: inherit;
+						right: 40px;
+						z-index: 101;
+					} 
+				// opportunitie-active
+				.calendar .fc-event-container .event-box.opportunitie-active {
+					border-left: none; 
+					border-top: 1px solid #009f61;
+					border-right: 1px solid #009f61;
+					border-bottom: 1px solid #009f61;
+					background: repeating-linear-gradient(
+						-45deg,
+						#00a96a,
+						#00a96a 4px,
+						#009f61 5px,
+						#009f61 6px 
+					);
+					top: -32px;
+				    	z-index: 1;
+				}
+
+				// color:
+				.calendar .fc-event-container .event-box.blue-color {
+					border-left: 3px solid #0062f4;
+				}
+				.calendar .fc-event-container .event-box.orange-color {
+					border-left: 3px solid #f8971d;
+				}
+				.calendar .fc-event-container .event-box.green-color {
+					border-left: 3px solid #8dc63f;
+				}
+				.calendar .fc-event-container .event-box.purple-color {
+					border-left: 3px solid #6f2671;
+				}	
+				.calendar .fc-event-container .event-box.white-blue-color {
+					border-left: 3px solid #00d4f4;
+				}
+				.calendar .fc-event-container .event-box.inline-title-calendar {
+					border-left: none;
+				}
+
+				.calendar .fc-event-container .event-box .name-company {
+					font-size: 11px;
+					font-family: 'GE Inspira';
+					color:#333;
+					text-transform: uppercase;
+					margin-top: 7px;
+				}
+					.calendar .fc-event-container .event-box.inline-title-calendar .name-company {
+						display: none;
+					}
+						.calendar .fc-event-container .event-box.no-opportunitie-active .name-company,
+						.calendar .fc-event-container .event-box.opportunitie-active .name-company {
+							color: #fff;
+						}
+						.calendar .fc-event-container .event-box.opportunitie-active .name-company {
+							display: none;
+						}
+				// vender
+				.calendar .fc-event-container .show-vender {
+					font-size: 10px;
+					font-family: 'GE Inspira';
+					color:#3b73b9;
+					z-index: 10;
+					position: relative;
+					top:2px;
+				}
+					.calendar .fc-event-container .event-box.inline-title-calendar .show-vender {
+						display: none;
+					}
+						.calendar .fc-event-container .event-box.no-opportunitie-active .show-vender {
+							color:#fff;
+						}
+						.calendar .fc-event-container .event-box.opportunitie-active .show-vender {
+							display: none;
+						}
+			.calendar .fc-day-grid-event {
+				margin: 0;
+				padding: 0;
+				margin-top: 7px;
+			}
+	// critical-end
+	.calendar .fc-event-container .event-box .critical-end {
+		display: none;
+		width: 103px;
+		height: 36px;
+		background-color: #204c80 ;
+		color: #fff;
+		font-size: 11px;
+		text-align: center;
+		position: absolute;
+		right: 0;
+		line-height: 37px;
+	}
+
+	.calendar .fc-event-container .event-box .save-money {
+		display: none;
+		font-size: 14px;
+		color: #fff;
+		position: absolute;
+		top: 12px;
+		left: 270px;
+	}
+		.calendar .fc-event-container .event-box.opportunitie-active .save-money {
+			display: block;
+		}
+
+		.calendar .fc-event-container .event-box.critical-active.inline-title-calendar .critical-end {
+			display: block;
+		}
+		.calendar .fc-event-container .event-box.critical-active.hide-icon .critical-end {
+			display: none;
+		}
+	// tooltip
+	.tooltip-payment.quarter-tooltip {
+		top: -90px;
+		left: 10px;
+		text-align: left;
+		cursor: initial;
+	}	
+	.tooltip-payment.opportunities-tooltip {
+		top: -90px;
+		left: 8px;
+		cursor: initial;
+	}
+	.flyout-vendors.vendor-tooltip {
+		top: -153px;
+		right: -266px;
+		left: inherit;
+	}
+	.flyout-vendors.vendor-tooltip-critical {
+		top: -114px;
+		right: -266px;
+		left: inherit;
+	}
+	// start-color
+	.calendar .fc-event-container .event-box .start-color {
+		display: none;
+		width: 101px;
+		height: 37px;
+		background: #05a7e5;
+		position: absolute;
+	    	top: -1px;
+		left: 0;
+		z-index: 10;
+	}
+		// critical-after
+		.calendar .fc-event-container .event-box.critical-after .start-color {
+			display: block;
+			background: #05a7e5;
+		}
+		.calendar .fc-event-container .event-box.inline-title-calendar .start-color {
+			display: none;
+		}
+		.calendar .fc-event-container .event-box.critical-after .name-company {
+			z-index: 12;
+			position: absolute;
+		}
+		.calendar .fc-event-container .event-box.critical-after .show-vender {
+			z-index: 12;
+			top: 19px;
+			color: #fff;
+		}
+
+		// opportunitie-active
+		.calendar .fc-event-container .event-box.no-opportunitie-active .start-color {
+			display: block;
+			background: #ee3124;
+			top: -1px;
+		}
+		.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar .start-color {
+			display: none;
+		}
+			.calendar .fc-event-container .event-box.no-opportunitie-active .name-company, 
+			.calendar .fc-event-container .event-box.opportunitie-active .name-company {
+				z-index: 12;
+			    	position: absolute;
+			}
+			.calendar .fc-event-container .event-box.no-opportunitie-active .show-vender {
+				color: #fff;
+				z-index: 12;
+				top: 19px;
+			}
+		
+		// Arrow n Triangle
+		.calendar .fc-event-container .event-box .arrow-color {
+			display: none;
+			width: 112px;
+			height: 35px;
+			background: repeating-linear-gradient(
+			-45deg,
+			#bc4646,
+			#bc4646 4px,
+			#a51414 5px,
+			#a51414 6px 
+			);
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 10; 
+		}
+		.calendar .fc-event-container .event-box .arrow-color-second {
+			display: none;
+			width: 15px;
+			height: 42px;
+			background-size: cover; 
+			background-image: url(../i/desk/little-triangle.png); 
+			position: absolute;
+			top: -6px;
+			right: -15px;
+			z-index: 10;
+		}
+		
+		.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar .arrow-color,
+		.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar .arrow-color-second {
+			display: block; 
+		}
+
+		.fc-day-number.active {
+			opacity: .3;
+		}
+		.fc-day-number.active.hasEvent {
+			opacity: 1;
+		}
+
+		.calendar .fc-event-container .event-box.remove-color {
+			border-left: none;
+		}
+
+
+		
+
+		.truncate {
+			width: 76px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.hasEvent {
+			background:#f1f3f5;
+		}
+
+.fc-scroller {
+	overflow: initial !important;
+	overflow-x: visible !important;
+	overflow-y: visible !important;
+}
+
+// fix z-index tooltip
+.fc-unthemed .fc-today {
+	background: transparent;
+} 
+.fc-unthemed .fc-today.hasEvent {
+	background: #f1f3f5;
+	border-color: #ddd;
+} 
+.fc-day-grid .fc-row, .fc-row .fc-bg, .fc-row .fc-content-skeleton {
+	z-index: inherit;
+}
+.fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
+	box-sizing: border-box;	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+// dropdown
+.wrap-dd-select span {
+	color: #000;
+}	
+
+
+// for dropdown custom
+.wrap-dd-select {
+	display: block;
+	width: 100%;
+	background:transparent;
+	padding: 0;
+	height: 100%;
+	border: none;
+
+}
+	.wrap-dd-select::after {
+		border: none;
+		display: block;
+		position: absolute;
+		right: 15px;
+		top: 16px;
+		background-image: url(../i/desk/sprite.png);
+		background-position: -91px -84px;
+		width: 9px;
+		height: 7px;
+	}
+	.wrap-dd-select .selected 
+	{
+		display: block;
+		font-size: 14px;
+		color: #313131;
+		line-height: 32px;
+		font-weight: 400;
+		padding-left: 16px;
+	}
+	 .dropdown-here.supply .wrap-dd-select .selected {
+		width: 80%;
+		white-space: nowrap; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	}
+	.wrap-dd-select .dropdown {
+		top:34px;
+	}
+	.fc-ltr .fc-basic-view .fc-day-number {
+		padding-right: 8px;
+		padding-top: 7px;
+	}
+
+	// For Date picker
+	.ui-widget.ui-widget-content {
+		border-color:#b3b3b3;
+		padding: 10px;
+	}
+	.ui-datepicker .ui-datepicker-header {
+		background:#f8f8f8;
+		margin-bottom: 5px;
+	}
+	.ui-datepicker-month,
+	.ui-datepicker-year {
+		color: #313131;
+		font-family: 'GE Inspira';
+		text-transform: uppercase;
+		font-weight: 500;
+		position: relative;
+		top: 1px;
+	}
+	.ui-datepicker-next {
+
+	}
+	.ui-datepicker-next.ui-state-hover {
+		border: none;
+		top: 2px;
+		right: 2px;
+	}
+	.ui-datepicker-prev.ui-state-hover {
+		border: none;
+		top:2px;
+		left: 2px;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default {
+		background: #fff;
+		border: none;
+		font-size: 17px;
+		text-align: center;
+	}
+	.ui-state-default.ui-state-highlight {
+		background-color: #05b4e5;
+		color: #fff;
+		border: none;
+	}
+	.ui-state-default.ui-state-active {
+		color: #05b4e5;
+	}
+	.ui-datepicker .ui-datepicker-prev,
+	.ui-datepicker .ui-datepicker-next {
+		cursor: pointer;
+	}
+	.ui-datepicker .ui-datepicker-prev span {
+		background-image: url(../i/desk/sprite.png);
+		background-position: -11px -103px;
+		width: 6px;
+		height: 10px;
+		top:18px;
+		left: 25px;
+		
+	}
+
+	.ui-datepicker .ui-datepicker-next span {
+		background-image: url(../i/desk/sprite.png);
+		background-position: 0px -103px;
+		width: 6px;
+		height: 10px;
+		top:18px;
+		cursor: pointer;
+	}
+	.ui-datepicker td {
+		padding: 5px 0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+	.ui-datepicker th span{
+		color: #313131;
+		font-family: 'GE Inspira';
+		font-weight: 500;
+	}
+	.wrap-dd-select .dropdown li a {
+		color: #313131;
+		font-family: 'GE Inspira';
+	}
+
+
+
+	.dashboard-overview-page .bottom-main-details .left-group-primary .about-statistics .po-payment-status .top-title .dropdown{
+		width: calc( 100% - 20px );
+		box-shadow:none;
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+		top: 30px;
+		
+	}
+	.dashboard-overview-page .bottom-main-details .left-group-primary .about-statistics .po-payment-status .top-title .wrap-dd-select {
+		box-shadow:none;
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+	}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 767px)  { 
+
+	// dropdown
+	.wrap-dd-select {
+		&:after {
+			background-image: url(../i/mobi/sprite@2x.png);
+			background-position: calc(-218px / 2) calc(-187px / 2);
+			background-size: calc(270px / 2) calc(229px / 2);
+			width: calc(18px / 2);
+			height: calc(12px / 2);
+		}
+	}
+	
+	// calendar
+	.calendar .fc-row table thead tr th.fc-day-header {
+		border-width: 0;
+		background:#f5f5f5;
+	}
+	.calendar .fc-basic-view .fc-body .fc-row {
+		height: 49px !important;
+	}
+	.calendar .fc-content-skeleton table tr td {
+		font-size: 9px;
+	}
+	.calendar .fc-event-container .quarter-box {
+		display: none;
+	}
+	.calendar .fc-event-container .show-vender {
+		display: none;
+	}
+	.calendar .fc-event-container .event-box .name-company {
+		display: none;
+	}
+	.calendar .fc-event-container .event-box {
+		height: 49px;
+		background: transparent;
+		border-top: none; 
+		border-right: none; 
+		border-bottom: none; 
+		top: -18px;
+	}
+	.calendar .fc-event-container .money-box {
+	    top: 24px;
+	    left: 5px;
+	}
+	.calendar .fc-event-container .event-box.critical-after {
+		height: 30px;
+	    	top: 1px;
+	}
+	.calendar .fc-event-container .event-box.critical-after .start-color {
+		height: 29px;
+	}
+	.calendar .fc-event-container .event-box.critical-active.inline-title-calendar .critical-end {
+		height: 28px;
+		line-height: 30px;
+	}
+	.calendar .fc-event-container .event-box.critical-active.inline-title-calendar .critical-end {
+		height: 28px;
+		line-height: 10px;
+		width: 51px;
+		padding: 5px;
+		font-size: 10px;
+	}
+	.calendar .fc-event-container .event-box.critical-after .name-company {
+		display: block;
+		font-size: 9px;
+		top: -2px;
+	}
+	.calendar .fc-event-container .event-box.critical-after.inline-title-calendar .name-company {
+		display: none;
+	}
+	.calendar .fc-event-container .event-box.critical-after .show-vender {
+		display: block;
+		font-size: 9px;
+		top: 17px;
+		
+	}
+		.calendar .fc-event-container .event-box .show-vender {
+			width: 65px;
+		}
+	.calendar .fc-event-container .event-box.critical-after.inline-title-calendar .show-vender {
+		display: none;
+	}
+	
+	// opportunitie
+	.calendar .fc-event-container .event-box.no-opportunitie-active,
+	.calendar .fc-event-container .event-box.opportunitie-active {
+		height: 28px;
+	   	top: 2px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active {
+		top: -26px;
+	}
+	.calendar .fc-event-container .event-box.no-opportunitie-active .start-color {
+		height: 28px;
+		width: 46px;
+	}
+	.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar .arrow-color {
+		width: 48px;
+		height: 27px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active .money-box {
+		left: 89px;
+		top: 4px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active .save-money {
+		top: 7px;
+		left: 111px;
+		font-size: 12px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active .quarter-box {
+		display: block;
+		left: 67px;
+	    	top: 4px;
+	}
+	.calendar .fc-event-container .event-box.no-opportunitie-active .name-company {
+		display: block;
+		font-size: 9px;
+		top: -2px;
+	}
+	
+	.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar .name-company {
+		display: none;
+	}
+
+	.calendar .fc-event-container .event-box.no-opportunitie-active .show-vender {
+		display: block;
+		font-size: 9px;
+		top: 17px;
+	}
+	.calendar .fc-event-container .event-box.no-opportunitie-active.inline-title-calendar .show-vender {
+		display: none;
+	}
+
+	.calendar .fc-event-container .event-box.inline-title-calendar.critical-after .quarter-box {
+		display: block;
+		top: 7px;
+		left: 5px;
+	}
+	.calendar .fc-event-container .event-box.inline-title-calendar.no-opportunitie-active .quarter-box {
+		display: none;
+	}
+
+	.calendar .fc-event-container .event-box .arrow-color-second.mobi-ver {
+		display: none;
+		width: 7px;
+		height: 28px;
+		background-size: cover;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		background-image: url(../i/mobi/little-triangle.png); 
+		position: absolute;
+		top: -1px;
+		right: -7px;
+		z-index: 10;
+	}
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px)  { 
+	
+	
+	.dropdown-here.supply .wrap-dd-select .selected {
+		white-space: nowrap;
+		width: 107px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.truncate {
+		width: 47px;
+	}
+	.calendar .fc-event-container .event-box .name-company {
+		margin-top: 3px;
+	}
+	.calendar .fc-event-container .show-vender {
+		top: -3px;
+	}
+
+}
+
+@media only screen 
+and (min-width : 1366px) 
+and (max-width : 1440px) {
+	.calendar .fc-event-container .event-box.opportunitie-active .quarter-box {
+	    left: 212px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active .money-box {
+	    	left: 237px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active .save-money {
+		left: 267px;
+	}
+}
+
+@media only screen 
+and (min-width : 1440px) {
+	.calendar .fc-event-container .event-box.opportunitie-active .quarter-box {
+    		left: 289px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active .money-box {
+		left: 307px;
+	}
+	.calendar .fc-event-container .event-box.opportunitie-active .save-money {
+		left: 331px;
+	}
+}

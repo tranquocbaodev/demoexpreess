@@ -1,0 +1,20 @@
+// font
+@font-face {
+	font-family: 'GE Inspira';
+	src: url('fonts/hinted-GEInspira.eot');
+	src: url('../fonts/hinted-GEInspira.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/hinted-GEInspira.woff') format('woff'),
+		url('../fonts/hinted-GEInspira.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GE Inspira';
+	src: url('fonts/hinted-GEInspira-Medium.eot');
+	src: url('../fonts/hinted-GEInspira-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/hinted-GEInspira-Medium.woff') format('woff'),
+		url('../fonts/hinted-GEInspira-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}

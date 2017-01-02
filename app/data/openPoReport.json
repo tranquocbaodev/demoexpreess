@@ -1,0 +1,351 @@
+{  
+    "dbOpenPoReport":[  
+        {  
+            "id":1,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Macias,Aaron",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":450,
+            "quantity":114,
+            "materialName":"Heat Exchanger"
+        },
+        {  
+            "id":2,
+            "poNumber":620090431,
+            "poCreationDate":"1/27/2017",
+            "needByDate":"8/12/2016",
+            "promisedDate":"1/27/2017",
+            "criticalDate":"10/3/2016",
+            "buyerName":"Mcconnell,Carrie",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"AMPHENOL CHANGZHOU ELECTRONICS CO LTD",
+            "poStatus":"services",
+            "sumOfOpenQuantity":30,
+            "quantity":71658,
+            "materialName":"Air Filter"
+        },
+        {  
+            "id":3,
+            "poNumber":620090430,
+            "poCreationDate":"1/27/2017",
+            "needByDate":"1/27/2017",
+            "promisedDate":"1/27/2017",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Mcconnell,Carrie",
+            "requestedBy":"John Doe,Michael",
+            "vendorName":"J ROTANER TRANSPORTES DE CARGAS LTDA",
+            "poStatus":"services",
+            "sumOfOpenQuantity":284194,
+            "quantity":174954,
+            "materialName":"PHASE MODULE,DB"
+        },
+        {  
+            "id":4,
+            "poNumber":620090429,
+            "poCreationDate":"1/20/2017",
+            "needByDate":"1/20/2017",
+            "promisedDate":"1/20/2017",
+            "criticalDate":"10/3/2016",
+            "buyerName":"Hilgers,Karl",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"HANGZHOU DATON WIND POWER IMPETUS CO LTD",
+            "poStatus":"services",
+            "sumOfOpenQuantity":693854,
+            "quantity":2468,
+            "materialName":"Carport Bolts Parts Kit"
+        },
+        {  
+            "id":5,
+            "poNumber":620090428,
+            "poCreationDate":"1/13/2017",
+            "needByDate":"1/13/2017",
+            "promisedDate":"1/13/2017",
+            "criticalDate":"10/3/2016",
+            "buyerName":"Mcconnell,Carrie",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"BEIJING XINGYUN GLOBAL T AND T CO LTD",
+            "poStatus":"msd",
+            "sumOfOpenQuantity":30,
+            "quantity":14040,
+            "materialName":"Filter Venting"
+        },
+        {  
+            "id":6,
+            "poNumber":21007537,
+            "poCreationDate":"1/13/2017",
+            "needByDate":"1/13/2017",
+            "promisedDate":"1/13/2017",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Gutierrez ,Laura",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":5,
+            "quantity":113911,
+            "materialName":"Hose"
+        },
+        {  
+            "id":7,
+            "poNumber":20050546,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Nelson,Jereny S",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"AEPI DO BRASIL INDUSTRIA E COMERCIO LTDA",
+            "poStatus":"services",
+            "sumOfOpenQuantity":29,
+            "quantity":102728,
+            "materialName":"Pitch Bearing Grease"
+        },
+        {  
+            "id":8,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Conn,Sue",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"UTI DO BRASIL LTDA",
+            "poStatus":"services",
+            "sumOfOpenQuantity":261,
+            "quantity":13416,
+            "materialName":"Pitch Bearing Grease"
+        },
+        {  
+            "id":9,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Peltzer,William D",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":8704,
+            "quantity":11555,
+            "materialName":"COOLER MOTORAF 112 M"
+        },
+        {  
+            "id":10,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Miller,Haley",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":450,
+            "quantity":8939,
+            "materialName":"Pitch Bearing Grease"
+        },
+        {  
+            "id":11,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Macias,Aaron",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"TRANSP DELLA VOLPE SA COM IND",
+            "poStatus":"services",
+            "sumOfOpenQuantity":450,
+            "quantity":114,
+            "materialName":"COOLER MOTORAF 112 M"
+        },
+        {  
+            "id":12,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Miller,Haley",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":450,
+            "quantity":114,
+            "materialName":"Accumulator 0.75L ARCT"
+        },
+        {  
+            "id":13,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Macias,Aaron",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":450,
+            "quantity":114,
+            "materialName":"Pitch Bearing Grease"
+        },
+        {  
+            "id":14,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Hilgers,Karl",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":31321,
+            "quantity":988,
+            "materialName":"Accumulator 0.75L ARCT"
+        },
+        {  
+            "id":15,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Miller,Haley",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":45,
+            "quantity":114,
+            "materialName":"Accumulator 0.75L ARCT"
+        },
+        {  
+            "id":16,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Hilgers,Karl",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":312,
+            "quantity":54654,
+            "materialName":"Pitch Bearing Grease"
+        },
+        {  
+            "id":17,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Macias,Aaron",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":450,
+            "quantity":114,
+            "materialName":"Pitch Bearing Grease"
+        },
+        {  
+            "id":18,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Macias,Aaron",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":5,
+            "quantity":102728,
+            "materialName":"Accumulator 0.75L ARCT"
+        },
+        {  
+            "id":19,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Miller,Haley",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":29,
+            "quantity":50014,
+            "materialName":"Pitch Bearing Grease"
+        },
+        {  
+            "id":20,
+            "poNumber":620090429,
+            "poCreationDate":"8/12/2016",
+            "needByDate":"8/12/2016",
+            "promisedDate":"8/12/2016",
+            "criticalDate":"9/3/2016",
+            "buyerName":"Conn,Sue",
+            "requestedBy":"Mcconnell.Carrie",
+            "vendorName":"KOCEL MACHINERY LIMITED",
+            "poStatus":"services",
+            "sumOfOpenQuantity":8792,
+            "quantity":11689,
+            "materialName":"Pitch Bearing Grease"
+        }
+    ],
+    "columnSetting":[
+        {
+            "value":"Po Number",
+            "isShow":true
+        },
+        {
+            "value":"Po Creation Date",
+            "isShow":false
+        },
+        {
+            "value":"Need By Date",
+            "isShow":true
+        },
+        {
+            "value":"Promised Date",
+            "isShow":true
+        },
+        {
+            "value":"Critical Date",
+            "isShow":true
+        },
+        {
+            "value":"Buyer Name",
+            "isShow":true
+        },
+        {
+            "value":"Requested By",
+            "isShow":false
+        },
+        {
+            "value":"Vendor Name",
+            "isShow":true
+        },
+        {
+            "value":"Po Status",
+            "isShow":false
+        },
+        {
+            "value":"Sum of Open Quantity",
+            "isShow":true
+        },
+        {
+            "value":"Quantity",
+            "isShow":true
+        }
+    ],
+    "selected":{}
+}

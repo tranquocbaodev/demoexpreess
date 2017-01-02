@@ -1,0 +1,62 @@
+// mixins for app
+@mixin circle {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+@mixin bgz {
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+@mixin bgzc($agu_one,$agu_two) {
+    background-size: $agu_one $agu_two;
+    -webkit-background-size: $agu_one $agu_two;
+    -moz-background-size: $agu_one $agu_two;
+}
+@mixin circlec($agu_one) {
+    border-radius: $agu_one;
+    -webkit-border-radius: $agu_one;
+    -moz-border-radius: $agu_one;
+}
+
+@mixin input-mixin($color,$fontsize,$colorplace) {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: $color;
+    font-size: $fontsize;
+    border: none;
+    outline: none;
+    background:transparent;
+    margin: 0;
+    padding: 0;
+    &::-webkit-input-placeholder {
+        color: $colorplace;
+        opacity: 1;
+    }
+    &::-moz-placeholder  {
+        color: $colorplace;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: $colorplace;
+        opacity:1;
+    }
+    &:-moz-placeholder {
+        color: $colorplace;
+        opacity: 1;
+    }
+    &:focus::-webkit-input-placeholder {
+       color: transparent; 
+    }
+    &:focus:-moz-placeholder {
+       color: transparent; 
+    }
+    &:focus::-moz-placeholder {
+       color: transparent; 
+    }
+    &:focus:-ms-input-placeholder {
+       color: transparent; 
+    }
+}

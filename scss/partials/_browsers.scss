@@ -1,0 +1,61 @@
+// Targeting Chrome & Safari
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	html {
+		line-height: 1;
+		position: relative; 
+	}
+	
+	.page-po-report .group-search .cover-search input {
+		height: 42px;
+		padding-top: 1px;
+		line-height: 1;
+	}
+	.drop-down-184.three .cover-link span,
+	.wrap-dd-select .selected {
+		position: relative;
+		top:1px;
+	}
+	.tool-tip-show .group-input input {
+		line-height: 1px;
+		height: 35px;
+	}
+	.main-login .right-login .btn-group .login,
+	.main-login .right-login .btn-group .forgot {
+		line-height: 36px;
+	}
+	.calendar .fc-event-container .event-box .arrow-color-second {
+		top: -7px;
+	}
+	.main-login .right-login .group-input input {
+		position: relative;
+		top:-1px;
+	}
+}
+
+// Targeting IE
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	html {
+		-ms-overflow-style: scrollbar;
+	}
+	input::-ms-clear, input::-ms-reveal {
+		display: none;
+	}
+	.page-po-report .group-search .cover-search input {
+		line-height: auto;
+		height: 30px;
+		margin-top: 2px;
+	}
+	.three.drop-down-184 .cover-link span {
+		line-height: 35px;
+	}
+	.wrap-dd-select .selected {
+		line-height: 35px;
+	}
+	.main-login .right-login .btn-group .login,
+	.main-login .right-login .btn-group .forgot {
+		line-height: 36px;
+	}
+	.page-po-report .group-search .cover-filter .drop-down-184 input {
+		line-height: 36px;
+	}
+}

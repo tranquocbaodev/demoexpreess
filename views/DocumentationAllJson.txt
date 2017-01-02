@@ -1,0 +1,6 @@
+dataRadius.json				---- data json for radius Chart on dashboard
+calendarDb.json  			---- data json for Calendar 
+filterData.json  			---- data json for dropdown filter
+materialsSupplierList.json 	---- data json for "materials-suppliers-list" page
+openPoReport.json 			---- data json for "open-po-report" page
+users.json					---- data json for "login" page

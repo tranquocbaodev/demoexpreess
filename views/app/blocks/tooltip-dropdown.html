@@ -1,0 +1,20 @@
+<div class="group-input">
+	<a href="javascript:;" class="icon-search hidden-xs"></a>
+	<a href="javascript:;" class="icon-small-search visible-xs"></a>
+	<input type="text" placeholder="Find Vendor Name" data-ng-model="searchVendorName">
+</div>
+<p class="title">
+	{{title}} Name
+</p>
+<ul>
+	<li>
+		<a href="javascript:;" data-ng-click="clickAllItem()">
+			All {{title}}
+		</a>
+	</li>
+	<li data-ng-repeat="item in list | filter:searchVendorName">
+		<a href="javascript:;" data-ng-click="clickItem(item,$event)">
+			{{item.value}}
+		</a>
+	</li>
+</ul>

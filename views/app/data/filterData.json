@@ -1,0 +1,179 @@
+{
+	"dbVendorsName":[
+        {
+            "type":"Vendor",
+            "value":"KOCEL MACHINERY LIMITED"
+        },
+		{
+	        "type":"Vendor",
+	        "value":"AMPHENOL CHANGZHOU ELECTRONICS CO LTD"
+        },
+        {
+	        "type":"Vendor",
+	        "value":"J ROTANER TRANSPORTES DE CARGAS LTDA"
+        },
+        {
+	        "type":"Vendor",
+	        "value":"HANGZHOU DATON WIND POWER IMPETUS CO LTD"
+        },
+        {
+	        "type":"Vendor",
+	        "value":"BEIJING XINGYUN GLOBAL T AND T CO LTD"
+        },
+        {
+	        "type":"Vendor",
+	        "value":"AEPI DO BRASIL INDUSTRIA E COMERCIO LTDA"
+        },
+        {
+	        "type":"Vendor",
+	        "value":"UTI DO BRASIL LTDA"
+        },
+        {
+            "type":"Vendor",
+            "value":"TRANSP DELLA VOLPE SA COM IND"
+        }
+	],
+	"dbSuppliersName":[
+        {
+            "type":"Suppliers",
+            "value":"Supplier 1"
+        },
+        {
+            "type":"Suppliers",
+            "value":"Supplier 2"
+        },
+        {
+            "type":"Suppliers",
+            "value":"Supplier 3"
+        },
+        {
+            "type":"Suppliers",
+            "value":"Supplier 4"
+        },
+        {
+            "type":"Suppliers",
+            "value":"Supplier 5"
+        },
+        {
+            "type":"Suppliers",
+            "value":"Supplier 6"
+        },
+        {
+            "type":"Suppliers",
+            "value":"Supplier 7"
+        }
+	],
+	"dbBuyerName":[
+		{
+            "type":"Buyer",
+            "value":"Macias,Aaron"
+        },
+        {
+            "type":"Buyer",
+            "value":"Mcconnell,Carrie"
+        },
+        {
+            "type":"Buyer",
+            "value":"Hilgers,Karl"
+        },
+        {
+            "type":"Buyer",
+            "value":"Gutierrez ,Laura"
+        },
+        {
+            "type":"Buyer",
+            "value":"Nelson,Jereny S"
+        },
+        {
+            "type":"Buyer",
+            "value":"Conn,Sue"
+        },
+        {
+            "type":"Buyer",
+            "value":"Peltzer,William D"
+        },
+        {
+            "type":"Buyer",
+            "value":"Miller,Haley"
+        }
+        
+	],
+	"dbRegion":[
+		{
+            "type":"Region",
+            "value":"Canada"
+        },
+        {
+            "type":"Region",
+            "value":"China"
+        },
+        {
+            "type":"Region",
+            "value":"Japan"
+        },
+        {
+            "type":"Region",
+            "value":"Brazil"
+        }
+	],
+	"dbMaterial":[
+		{
+            "type":"Materials",
+            "value":"Heat Exchanger"
+        },
+        {
+            "type":"Materials",
+            "value":"Air Filter"
+        },
+        {
+            "type":"Materials",
+            "value":"PHASE MODULE,DB"
+        },
+        {
+            "type":"Materials",
+            "value":"Carport Bolts Parts Kit"
+        },
+        {
+            "type":"Materials",
+            "value":"Filter Venting"
+        },
+        {
+            "type":"Materials",
+            "value":"Hose"
+        },
+        {
+            "type":"Materials",
+            "value":"Pitch Bearing Grease"
+        },
+        {
+            "type":"Materials",
+            "value":"COOLER MOTORAF 112 M"
+        },
+        {
+            "type":"Materials",
+            "value":"Accumulator 0.75L ARCT"
+        }
+	],
+    "dbMaterialType":[
+        {
+            "type":"MaterialsType",
+            "value":"MSD"
+        },
+        {
+            "type":"MaterialsType",
+            "value":"Services"
+        },
+        {
+            "type":"MaterialsType",
+            "value":"Suppliers"
+        },
+        {
+            "type":"MaterialsType",
+            "value":"Indirect Material"
+        },
+        {
+            "type":"MaterialsType",
+            "value":"Other"
+        }
+    ]
+}

@@ -1,0 +1,381 @@
+<div class="dashboard-overview-page calen-view-page">
+	<div class="bottom-main-details"> 
+		<div class="left-group-primary">
+			<div class="about-calen-view">
+				<div class="top-title-func hidden-xs">
+					<div class="first-group-title">
+						<div class="left-content">
+							<span class="grey-title">Calendar view</span>
+							<div class="calen-ranger">
+								<a class="icon-prev-arrow" href="javascript:;" data-ng-click="prevMonth()" data-click-next-prev-month data-type="prev"></a>
+								<a class="icon-next-arrow" href="javascript:;" data-ng-click="nextMonth()" data-click-next-prev-month data-type="next"></a>
+								<span class="text">{{firstDay}} - {{lastDay}}</span>
+							</div>
+							<!-- end .calen-ranger -->
+							<div class="clear"></div>   
+						</div>
+						<!-- end .left-content -->
+						<div class="right-content">
+							<div class="blue-toggle">
+								<a class="same-style one active" href="javascript:;" data-ng-click="isShowTimeLine=false" data-ng-class="{active:!isShowTimeLine}">Month</a>
+								<a class="same-style two" href="javascript:;" data-ng-click="isShowTimeLine=true" data-ng-class="{active:isShowTimeLine}">Timeline</a>
+								<div class="clear"></div>
+							</div>
+							<!-- end .blue-toggle -->
+							<a class="btn-today" href="javascript:;" data-ng-click="toDayFunc()" data-click-next-prev-month data-type="today">Today</a>
+							<a class="icon-prev-page02" href="javascript:;" data-ng-click="prevMonth()" data-click-next-prev-month data-type="prev"></a>
+							<a class="icon-next-page02" href="javascript:;" data-ng-click="nextMonth()" data-click-next-prev-month data-type="next"></a>
+							<div class="clear"></div>
+						</div>
+						<!-- end .right-content -->
+					</div>
+					<!-- end .first-group-title -->
+					<div class="second-group-func">
+						<span class="text">Filters</span>
+						<div class="search-here">
+							<a class="icon-search" href="javascript:;"></a>
+							<input class="for-search" type="text" placeholder="Search" data-ng-model="queryCriticalSearch" data-ng-change="searchCritical(queryCriticalSearch)"/>
+						</div>
+
+						<!-- end .search-here -->
+						<div class="dropdown-here buyers drop-down-184 three">
+							<a class="cover-link btn-tooltipvender" href="javascript:;" data-ng-click="clickDropdownTooltip($event)">
+								<span>
+									{{titleFilterBuyer}}
+								</span>
+								<i class="icon-down-arrow03"></i>
+							</a>
+							<div class="tool-tip-show" data-tooltip-dropdown-block="buyerNameReport" data-title="Buyer">
+							</div>
+						</div>
+						<div class="dropdown-here vendors drop-down-184 three">
+							<a class="cover-link btn-tooltipvender" href="javascript:;" data-ng-click="clickDropdownTooltip($event)">
+								<span>
+									{{titleFilterVendor}}
+								</span>
+								<i class="icon-down-arrow03"></i>
+							</a>
+							<div class="tool-tip-show" data-tooltip-dropdown-block="vendorsName" data-title="Vendor">
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!-- end .second-group-func -->
+				</div>
+				<!-- end .top-title-func -->
+				<div class="top-title-func-mobi-ver visible-xs">
+					<div class="month-n-timeline">
+						<a class="btn-today" href="javascript:;" data-ng-click="toDayFunc()" data-click-next-prev-month data-type="today">Today</a>
+						<a class="same-style  active" href="javascript:;" data-ng-click="isShowTimeLine=false" data-ng-class="{active:!isShowTimeLine}">Month</a>
+						<a class="same-style" href="javascript:;" data-ng-click="isShowTimeLine=true" data-ng-class="{active:isShowTimeLine}">Timeline</a>
+						<div class="clear"></div>
+					</div>
+					<!-- end .month-n-timeline -->
+					<div class="choose-datetimee">
+						<a class="icon-big-prev-arrow" href="javascript:;" data-ng-click="prevMonth()" data-click-next-prev-month data-type="prev"></a>
+						<a class="icon-big-next-arrow" href="javascript:;" data-ng-click="nextMonth()" data-click-next-prev-month data-type="next"></a>
+						<span class="blue-text">{{firstDayMobile}}</span> 
+						<span class="black-text">to</span>
+						<span class="blue-text clone">{{lastDayMobile}}</span>
+						<div class="clear"></div>
+					</div>
+					<!-- end .choose-datetime -->
+					<section class="search-bar-mobi">
+						<div class="head-search">
+							<div data-search-tag-block="listTag"></div>
+						</div>
+						<!-- Head Search -->
+						<div class="main-search">
+							<div class="drop-down-here">
+								<a href="javascript:;" class="btn-buyers-tool" data-ng-click="clickDropdownTooltipMobile($event,'buyer')"></a>
+								<p class="text">
+									Buyers
+								</p>
+								<i class="icon-small-down-arrow"></i>
+								<i class="icon-small-up-arrow"></i>
+							</div>
+							<!-- Buyers -->
+							<div class="drop-down-here">
+								<a href="javascript:;" class="btn-vendors-tool" data-ng-click="clickDropdownTooltipMobile($event,'vendor')"></a>
+								<p class="text">
+									Vendors
+								</p>
+								<i class="icon-small-down-arrow"></i>
+								<i class="icon-small-up-arrow"></i>
+								
+							</div>
+							<!-- Vendors -->
+							<div class="clear"></div>
+							<div class="tool-tip-show buyers-tool" data-tooltip-dropdown-block="buyerNameReport" data-title="Buyer">
+							</div>
+							<div class="tool-tip-show vendors-tool" data-tooltip-dropdown-block="vendorsName" data-title="Vendor">
+							</div>
+						</div>
+						<!-- main-search -->
+					</section>
+					<!-- Search Bar -->
+				</div>
+				<!-- end .top-title-func-mobi-ver -->
+				<div class="bottom-square-calen">
+					<div class="calen-month-version" data-ng-show="!isShowTimeLine" data-full-calendar-block="dbCalendar">
+					</div> 
+					<!-- end .calen-month-version -->
+					<div class="calen-timeline-version" data-time-line-block="dbCalendar" data-ng-show="isShowTimeLine">
+					</div>
+					<!-- end .calen-timeline-version -->
+
+					<div class="legend-here" data-ng-show="!isShowTimeLine">
+						<span class="group-one hidden-xs"><i class="first-s">Qx</i><i class="second-s">Qx</i> Q1-4 Payment Due</span>
+						<span class="group-two"><i class="icon-green-dollar01"></i> Opportunity found!</span>
+						<div class="clear"></div>
+					</div>
+					<!-- end .legend-here -->
+				</div>
+				<!-- end .bottom-square-calen -->
+			</div>
+			<!-- end .about-calen-view -->
+		</div>
+		<!-- end .left-group-primary -->
+		<div class="right-events-data">
+			<div class="top-status-content hidden-xs">
+				<div class="blue-total-current">
+					<i class="blue-square">Q1</i>
+					<a class="blue-title" href="javascript:;">Total current Dollar Amount PO Order</a>
+					<span class="status">USD 551,897.00 <b>(87% from Q1 Budget Total Purchase order)</b></span> 
+				</div>
+				<!-- end .blue-total-current -->
+				<div class="total-number">
+					<div class="left-grey">
+						<span class="big-number">5</span>
+						<span class="small-title">Opportunities</span>
+					</div>
+					<!-- end .left-grey -->
+					<div class="left-grey clone">
+						<i class="icon-green-dollar03"></i> 
+						<span class="big-number">$ 119,608</span>
+						<span class="small-title">Total Save up to</span>
+					</div>
+					<!-- end .left-grey -->
+					<div class="clear"></div>
+				</div>
+				<!-- end .total-number -->
+			</div>
+			<!-- end .top-status-content -->
+			<div class="top-status-content visible-xs">
+				<div class="top-hint">
+					<i class="icon-info"></i>
+					<span class="text">Found <i class="t-bold">5</i> PO data from your selected dates</span>
+				</div>
+				<div class="total-number">
+					<div class="left-grey">
+						<span class="big-number">5</span>
+						<span class="small-title">Opportunities</span>
+					</div>
+					<!-- end .left-grey -->
+					<div class="left-grey clone">
+						<i class="icon-green-dollar03 icon-dollar01"></i>
+						<span class="big-number">$ 119,608</span>
+						<span class="small-title">Total Save up to</span>
+					</div>
+					<!-- end .left-grey -->
+					<div class="clear"></div>
+				</div>
+				<!-- end .total-number -->
+				<div class="blue-total-current">
+					<i class="blue-square">Q1</i>
+					<a class="blue-title" href="javascript:;">Total current Dollar Amount PO Order</a>
+					<span class="status">USD 551,897.00 <b>(87% from Q1 Budget Total Purchase order)</b></span> 
+				</div>
+				<!-- end .blue-total-current -->
+			</div>
+			<!-- end .top-status-content -->
+
+			<div class="bottom-podata-user">
+				<div class="choose-opp">
+					<span class="grey-title hidden-xs">Open PO Data</span>
+					<span class="grey-title visible-xs">Open PO Data (<i>5</i>)</span>
+					<div class="dropdown-here hidden-xs">
+						<div data-dropdown-select="ddSelectOptionsAllVendors" data-dropdown-model="ddSelectSelectedAllVendors"></div>
+					</div>
+					<a class="blue-text visible-xs" href="javascript:;">Opportunities First</a>
+				</div>
+				<!-- end .choose-opp -->
+				<div class="list-podata" data-ng-class="{'fix-top':(itemDetailCritical.title.length > 0)}">
+					<div class="top-hint hidden-xs" data-ng-show="(itemDetailCritical.title.length > 0)">
+						<i class="icon-info"></i>
+						<span class="text">Found <i class="t-bold">{{countPoDetail}}</i> PO data from your selected dates</span>
+					</div>
+					<ul class="demo-podata">
+						<li class="first-gen" data-ng-repeat="item in dbCalendar" data-ng-class="{'blue-line':(item.category==='category1'),'orange-line':(item.category==='category2'),'green-line':(item.category==='category3'),'lightblue-line':(item.category==='category4'),active:item.status==='No Request','highlines':item.selected}" 
+						data-ng-click="clickDetailCriticalsItem(item,$event)">
+							<a class="btn-request" href="javascript:;"><span>Request to Move</span></a> 
+							<a class="icon-big-down-arrow visible-xs" href="javascript:;" data-ng-click="clickCollapseCriticalMobile($event)"></a>
+							<a class="icon-big-up-arrow visible-xs ng-hide" href="javascript:;" data-ng-click="clickCollapseCriticalMobile($event)"></a>
+							<div class="primary-group">
+								<p class="datetime">Critical Date <a class="blue-text" href="javascript:;">{{formatDate(item.criticalDate,'normal')}}</a></p>
+								<div class="striped-box">
+									<i class="icon-green-dollar04 icon-dollar02"></i>
+									<span class="text">Save up to <i class="t-bold">{{item.saving | currency:"$":0}}</i> by push out "Critical Date" on {{formatDate(item.savingDate,'save')}}.</span>
+								</div>
+								<!-- end .striped-box -->
+								<div class="info-plus">
+									<div class="same-style one">
+										<span class="num">{{item.vendors.length}}</span>
+										<span class="name">Vendors</span>
+									</div>
+									<div class="same-style two">
+										<span class="num">{{getCountOpenPO(item)}}</span>
+										<span class="name">Open PO</span>
+									</div>
+									<div class="same-style three">
+										<span class="num"><i>$</i> {{getSumTotal(item) | number}}</span>
+										<span class="name">Sum of Total</span>
+									</div>
+									<span class="blue-square">{{item.quarter}}</span>
+									<a class="view-more hidden-xs" href="javascript:;" data-ng-click="clickCollapseCritical($event)">
+										<i class="icon-down-arrow02"></i>
+									</a>
+									<div class="clear"></div>
+								</div>
+								<!-- end .info-plus -->
+							</div>
+							<!-- end .primary-group -->
+							<div class="secondary-group">
+								<ul class="expanded-podata-details">
+									<li class="second-gen" data-ng-repeat="vendor in item.vendors">
+										<span class="big-title">{{vendor.title}}</span>
+										<div class="column-values">
+											<ul>
+												<li class="msd-services" data-ng-repeat="po in vendor.openPos">
+													<span class="blue-num">{{$index+1}}</span>
+													<div class="row-one">
+														<div class="same-style">
+															<span class="name">Po Number</span>
+															<span class="num">{{po.poNumber}}</span>
+														</div>
+														<!-- end .same-style -->
+														<div class="same-style">
+															<span class="name">Need By Date</span>
+															<span class="num">{{po.needByDate}}</span>
+														</div>
+														<!-- end .same-style -->
+														<div class="same-style">
+															<span class="name">SUM of total</span>
+															<span class="num">{{po.sumOfToal | currency:"$":0}}</span>
+														</div>
+														<!-- end .same-style -->
+														<span class="grey-button">{{po.status}}</span>
+														<div class="clear"></div>
+													</div>
+													<!-- end .row-one -->
+													<div class="row-two">
+														<div class="same-style">
+															<span class="name">PO Line Description</span>
+															<span class="num">{{po.poLineDesc}}</span>
+														</div>
+														<!-- end .same-style -->
+														<div class="clear"></div>
+													</div>
+													<!-- end .row-two -->
+												</li>
+											</ul>
+										</div>
+										<!-- end .column-values-->
+									</li>
+								</ul>
+								<!-- end .expanded-podata-details -->
+							</div>
+							<!-- end .secondary-group -->
+						</li>
+					</ul>
+				</div>
+				<!-- end .list-podata -->
+			</div>
+			<!-- end .bottom-podata-user -->
+		</div>
+		<!-- end .right-events-data -->
+		<div class="clear"></div>
+	</div>
+	<!-- end .bottom-main-details -->
+	<div class="dark-overlay calendar-ver visible-xs ng-hide" data-ng-click="clickDarkOverlay($event)"></div>
+	<div class="dark-overlay-d calendar-ver visible-xs ng-hide"></div>
+	<div class="tooltip-payment-mobi-ver blue-ver visible-xs ng-hide">
+		<div class="top-title-content">
+			<a class="icon-big-remove closePaymentPopup" href="javascript:;"></a>
+			<span class="blue-square">Q1</span>
+			<span class="big-title">Payment Due</span>
+			<span class="small-status">Cash payment in <b>1st Quarter 2016</b>. "Payment due" on <b>30/1/2016</b> <i>(30 days)</i></span> 
+		</div>
+		<!-- end .top-title-content -->
+		<div class="bottom-data-content">
+			<div class="cover-all">
+				<ul>
+					<li>
+						<span class="big-title">HANGZHOU DATON WIND POWER IMPETUS CO LTD</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+					<li>
+						<span class="big-title">BRASVENDING COMERCIAL SA</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+				</ul>
+			</div>
+			<a class="blue-text" href="javascript:;">+1 More Vendors</a>
+		</div>
+		<!-- end .bottom-data-content -->
+	</div>
+	<!-- end .tooltip-payment-mobi-ver -->
+	<div class="tooltip-payment-mobi-ver green-ver visible-xs ng-hide">
+		<div class="top-title-content">
+			<a class="icon-big-remove closeOpportunitiesPopup" href="javascript:;"></a>
+			<span class="icon-dollar03"></span>
+			<span class="big-title">OPPORTUNITIES</span>
+			<span class="small-status">Save up to <b>$113,911</b> by push out "Critical Date" on <b>4/2/2016</b>.</span>
+		</div>
+		<!-- end .top-title-content -->
+		<div class="bottom-data-content">
+			<div class="cover-all">
+				<ul>
+					<li>
+						<span class="big-title">HANGZHOU DATON WIND POWER IMPETUS CO LTD</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+					<li>
+						<span class="big-title">BRASVENDING COMERCIAL SA</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+				</ul>
+			</div>
+			<a class="blue-text" href="javascript:;">+2 More Vendors</a>
+		</div>
+		<!-- end .bottom-data-content -->
+	</div>
+	<!-- end .tooltip-vendor-mobi-ver -->
+	<div class="tooltip-payment-mobi-ver vendor-ver visible-xs ng-hide">
+		<div class="bottom-data-content">
+			<div class="cover-all">
+				<ul>
+					<li>
+						<span class="big-title">HANGZHOU DATON WIND POWER IMPETUS CO LTD</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+					<li>
+						<span class="big-title">BRASVENDING COMERCIAL SA</span>
+						<span class="small-data">P.O: <b>2</b></span>
+						<span class="small-data only">Grand Total: <b>$ 22,979</b></span>
+					</li>
+				</ul>
+			</div>
+			<a class="blue-text" href="javascript:;">+2 More Vendors</a>
+		</div>
+		<!-- end .bottom-data-content -->
+	</div>
+	<!-- end .tooltip-payment-mobi-ver -->
+	<div class="bottom-navi visible-xs" data-header-mobi-temp></div>
+</div>
+<!-- end .dashboard-overview-page -->

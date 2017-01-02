@@ -1,0 +1,21 @@
+{
+	"dataChartRadiusStatusAdjustment": [
+		{
+			"radiusBig": [
+				{
+					"valueRadius": 3,
+					"detail": "Draft"
+				},
+				{
+					"valueRadius": 154,
+					"detail": "Proposed"
+				},
+				{
+					"valueRadius": 19,
+					"detail": "Not corrected"
+				}
+			],
+			"rangeColor": ["#d80c4a", "#2992d5", "#23bf04"]
+		}
+	]
+}

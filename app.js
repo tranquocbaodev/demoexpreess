@@ -37,10 +37,10 @@
 //   next(err);
 // });
 
-// // error handlers
+// error handlers
 
-// // development error handler
-// // will print stacktrace
+// development error handler
+// will print stacktrace
 // if (app.get('env') === 'development') {
 //   app.use(function(err, req, res, next) {
 //     res.status(err.status || 500);
@@ -65,7 +65,7 @@
 // module.exports = app;
 
 
-var express = require('express');
+var express = require('express');//comment
 var app = express();
 var fs      = require('fs');
 var parser  = require('body-parser');
@@ -73,19 +73,19 @@ var parser  = require('body-parser');
 //Setup ip adress and port
 var ipaddress ;
 
-function initIPAdress() {
-    var adr = process.env.OPENSHIFT_NODEJS_IP;
-    if (typeof adr === "undefined") {
-            //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
-            //  allows us to run/test the app locally.
-            console.warn('No OPENSHIFT_NODEJS_IP var, using localhost');
-            adr = 'localhost';
-    }
+// function initIPAdress() {
+//     var adr = process.env.OPENSHIFT_NODEJS_IP;
+//     if (typeof adr === "undefined") {
+//             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
+//             //  allows us to run/test the app locally.
+//             console.warn('No OPENSHIFT_NODEJS_IP var, using localhost');
+//             adr = 'localhost';
+//     }
 
-    ipaddress = adr;
-}
+//     ipaddress = adr;
+// }
 
-var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var port  = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 
 app.get('/', function (req, res) {
@@ -97,9 +97,12 @@ app.get('/admin', function (req, res) {
         res.send( fs.readFileSync('./index.html') );
 })
 
-initIPAdress(); //Setup IP adress before app.listen()
+// initIPAdress(); //Setup IP adress before app.listen()
 
 app.listen(port, ipaddress, function() {
         console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now() ), ipaddress, port);
 });
+
+
+
